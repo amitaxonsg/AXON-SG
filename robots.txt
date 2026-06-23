@@ -2,3 +2,4 @@ User-agent: *
 Allow: /
 
 Sitemap: https://axon.com.sg/sitemap.xml
+Sitemap: https://axon.com.sg/sitemap-migrations.xml
