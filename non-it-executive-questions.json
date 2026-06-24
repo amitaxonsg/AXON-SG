@@ -3,13 +3,12 @@
     "id": "axon-001",
     "category": "Axon Contact",
     "question": "How do I contact Axon or what is Axon's address?",
-    "plain_english_answer": "Axon supports business clients in Singapore, the Philippines and remotely worldwide. For the fastest help, use WhatsApp or the contact form. Do not assume a walk-in office visit unless Axon confirms an appointment. If you need a meeting, share your company name, website, issue and preferred time.",
-    "recommended_action": "Use WhatsApp Axon or the Contact page and include your website URL, email domain or issue summary.",
+    "plain_english_answer": "Axon supports business clients in Singapore, the Philippines and remotely worldwide. For fastest help, use WhatsApp or the contact form. Do not assume a walk-in office visit unless Axon confirms an appointment. If you need a meeting, share your company name, website, issue and preferred time.",
+    "recommended_action": "Use WhatsApp Axon or the Contact page and include your website URL, email domain, screenshots or issue summary.",
     "diy_possible": "Yes",
-    "when_to_call_axon": "Contact Axon when the matter involves your website, hosting, email, cloud, AI, automation, security, payment gateway or business technology decision.",
+    "when_to_call_axon": "Contact Axon when the matter involves your website, hosting, email, cloud, AI, automation, security, payment gateway or a business technology decision.",
     "recommended_service": "Technology & AI Advisory",
     "related_page": "contact.html",
-    "related_page_ph": "contact.html",
     "urgency": "medium",
     "keywords": [
       "axon contact",
@@ -23,17 +22,71 @@
       "email axon",
       "support contact",
       "where is axon",
-      "how to contact"
+      "how to contact",
+      "axon singapore",
+      "axon philippines",
+      "axon clark",
+      "axon pampanga"
     ]
+  },
+  {
+    "id": "general-001",
+    "category": "General Business Technology Help",
+    "question": "I need IT help but I do not know what service I need.",
+    "plain_english_answer": "That is common for business owners. The issue may involve website, email, hosting, domain, AI, automation, security, CRM, payment, cloud files or staff workflow. The best first step is to describe the business problem in plain English instead of trying to name the technology.",
+    "recommended_action": "Share what is not working, what business result you want, your website/domain, screenshots and whether the issue affects sales, staff or customers.",
+    "diy_possible": "Partly",
+    "when_to_call_axon": "Ask Axon if the issue affects enquiries, email, payments, security, customer data, staff productivity or business operations.",
+    "recommended_service": "Business Technology Help",
+    "related_page": "business-technology-help.html",
+    "urgency": "medium",
+    "keywords": [
+      "it help",
+      "technology help",
+      "business technology",
+      "not sure what i need",
+      "need help",
+      "technical problem",
+      "computer problem",
+      "system problem",
+      "business problem",
+      "digital problem",
+      "what service do i need"
+    ],
+    "related_page_ph": "business-technology-help-philippines.html"
+  },
+  {
+    "id": "general-002",
+    "category": "Technology Advisory",
+    "question": "Can Axon advise me before I spend money on software or AI?",
+    "plain_english_answer": "Yes. Many companies buy tools before checking whether the tool fits the workflow, staff ability, data, budget and long-term support needs. A short advisory review can prevent wrong subscriptions, duplicated systems and poor adoption.",
+    "recommended_action": "List the tools being considered, current pain points, number of users, budget, data involved and what result management expects.",
+    "diy_possible": "Yes",
+    "when_to_call_axon": "Call Axon before buying software, AI tools, CRM, email systems, hosting, website platforms or automation tools that affect staff or customers.",
+    "recommended_service": "Technology & AI Advisory",
+    "related_page": "business-technology-help.html",
+    "urgency": "medium",
+    "keywords": [
+      "software advice",
+      "technology advisor",
+      "ai advisor",
+      "before buying software",
+      "which software",
+      "tool selection",
+      "platform selection",
+      "technology decision",
+      "digital advisor"
+    ],
+    "related_page_ph": "business-technology-help-philippines.html"
   },
   {
     "id": "web-001",
     "category": "Website Problems",
     "question": "My website looks old. Should I repair it or rebuild it?",
     "plain_english_answer": "If the website is slow, hard to edit, not mobile friendly, or no longer explains your business clearly, a revamp is usually better than small repairs. If the design is still acceptable and only a few items are broken, repair may be enough.",
-    "recommended_action": "Check the website design, mobile view, speed, content, contact forms, and Google visibility before deciding.",
+    "recommended_action": "Check the website design, mobile view, speed, content, contact forms and Google visibility before deciding.",
     "diy_possible": "Partly",
-    "when_to_call_axon": "Call Axon if the site affects enquiries, credibility, SEO, or business growth.",
+    "when_to_call_axon": "Call Axon if the site affects enquiries, credibility, SEO or business growth.",
     "recommended_service": "Website Revamp & Modernization",
     "related_page": "website-revamps-modernization.html",
     "urgency": "medium",
@@ -43,7 +96,11 @@
       "modern website",
       "business website",
       "redesign website",
-      "rebuild website"
+      "rebuild website",
+      "website redesign",
+      "repair website",
+      "website looks old",
+      "outdated website"
     ]
   },
   {
@@ -51,33 +108,35 @@
     "category": "Google Visibility",
     "question": "Why is my website not showing on Google?",
     "plain_english_answer": "A website may not show on Google because it is new, not indexed, has weak content, technical SEO issues, poor page titles, slow loading speed, or lacks business relevance signals.",
-    "recommended_action": "Check Google Search Console, sitemap, robots.txt, page titles, content quality, and whether Google has indexed the pages.",
+    "recommended_action": "Check Google Search Console, sitemap, robots.txt, page titles, content quality and whether Google has indexed the pages.",
     "diy_possible": "Partly",
     "when_to_call_axon": "Call Axon if the website is important for enquiries and Google traffic but does not appear for business keywords.",
     "recommended_service": "SEO & Local Business Visibility",
     "related_page": "website-not-showing-on-google.html",
-    "related_page_ph": "website-not-showing-on-google-philippines.html",
     "urgency": "medium",
     "keywords": [
-      "Google ranking",
-      "not on Google",
-      "SEO",
+      "google ranking",
+      "not on google",
+      "seo",
       "search visibility",
       "not showing on google",
-      "website not found"
-    ]
+      "website not found",
+      "google cannot find my website",
+      "indexing",
+      "search console"
+    ],
+    "related_page_ph": "website-not-showing-on-google-philippines.html"
   },
   {
     "id": "web-003",
-    "category": "Website Problems",
+    "category": "Website Forms",
     "question": "My website contact form is not sending email.",
     "plain_english_answer": "This usually means the form, mail server, website plugin, SMTP settings, spam filter, DNS records or hosting mail routing is not working properly. The form may appear to submit, but the message does not reach the right mailbox.",
-    "recommended_action": "Check whether the form stores submissions, whether SMTP is configured, whether the receiving mailbox works, and whether SPF/DKIM/DMARC are correct.",
+    "recommended_action": "Check whether the form stores submissions, whether SMTP is configured, whether the receiving mailbox works and whether SPF/DKIM/DMARC are correct.",
     "diy_possible": "Partly",
-    "when_to_call_axon": "Call Axon if enquiries are important, messages are missing, or the form affects sales and customer service.",
+    "when_to_call_axon": "Call Axon if enquiries are important, messages are missing or the form affects sales and customer service.",
     "recommended_service": "Website Forms & Email Delivery",
     "related_page": "website-form-not-sending-email.html",
-    "related_page_ph": "website-form-not-sending-email-philippines.html",
     "urgency": "high",
     "keywords": [
       "contact form",
@@ -85,8 +144,13 @@
       "email not sending",
       "not receiving enquiry",
       "website form",
-      "form email"
-    ]
+      "form email",
+      "form submission",
+      "cf7",
+      "contact form 7",
+      "enquiry form"
+    ],
+    "related_page_ph": "website-form-not-sending-email-philippines.html"
   },
   {
     "id": "web-004",
@@ -105,7 +169,10 @@
       "loading slow",
       "core web vitals",
       "mobile slow",
-      "performance"
+      "performance",
+      "speed optimization",
+      "website speed",
+      "pagespeed"
     ]
   },
   {
@@ -126,47 +193,350 @@
       "bolt",
       "replit",
       "ai builder",
-      "deploy website"
+      "deploy website",
+      "v0",
+      "framer ai",
+      "durable ai",
+      "ai generated website"
     ]
+  },
+  {
+    "id": "web-006",
+    "category": "Mobile Website",
+    "question": "My website does not look good on mobile.",
+    "plain_english_answer": "Most visitors use mobile phones first. If the website is hard to read, buttons are too small, menus break, or forms are difficult to submit, it can reduce enquiries and trust.",
+    "recommended_action": "Check the homepage, service pages, menu, form, WhatsApp button, images and loading speed on a real phone.",
+    "diy_possible": "Partly",
+    "when_to_call_axon": "Call Axon if mobile users are important for enquiries, local search, paid ads or customer communication.",
+    "recommended_service": "Mobile-Friendly Website Optimization",
+    "related_page": "website-optimization-audit.html",
+    "urgency": "medium",
+    "keywords": [
+      "mobile website",
+      "not mobile friendly",
+      "responsive design",
+      "phone view",
+      "mobile view",
+      "mobile menu",
+      "website broken on phone",
+      "small laptop",
+      "responsive"
+    ]
+  },
+  {
+    "id": "web-007",
+    "category": "Website Enquiries",
+    "question": "My website gets visitors but no enquiries.",
+    "plain_english_answer": "Traffic alone is not enough. The site may not explain the offer clearly, may have weak calls-to-action, poor trust signals, slow pages, confusing navigation or forms that are not easy to use.",
+    "recommended_action": "Review the landing pages, service wording, testimonials, contact options, WhatsApp button, form tracking and Google Analytics conversion data.",
+    "diy_possible": "Partly",
+    "when_to_call_axon": "Call Axon if the website is getting traffic but not generating business leads.",
+    "recommended_service": "Website Conversion Review",
+    "related_page": "website-optimization-audit.html",
+    "urgency": "medium",
+    "keywords": [
+      "no enquiries",
+      "no leads",
+      "website no leads",
+      "visitors no enquiry",
+      "conversion",
+      "call to action",
+      "website not converting",
+      "landing page not converting"
+    ]
+  },
+  {
+    "id": "web-008",
+    "category": "Website Maintenance",
+    "question": "Who will maintain my website after it goes live?",
+    "plain_english_answer": "A business website still needs updates after launch. Maintenance may include content updates, plugin/security updates, backups, forms, analytics, hosting checks and small layout fixes.",
+    "recommended_action": "Decide how often the site needs updates, who approves content, and whether updates affect SEO or forms.",
+    "diy_possible": "Partly",
+    "when_to_call_axon": "Call Axon if you want a reliable website maintenance and support arrangement instead of ad-hoc fixes.",
+    "recommended_service": "Website Maintenance & Support",
+    "related_page": "website-maintenance-support.html",
+    "urgency": "medium",
+    "keywords": [
+      "website maintenance",
+      "maintain website",
+      "website support",
+      "update website",
+      "monthly website support",
+      "website changes",
+      "content update"
+    ]
+  },
+  {
+    "id": "web-009",
+    "category": "E-Commerce",
+    "question": "Should I build an e-commerce website?",
+    "plain_english_answer": "E-commerce is useful when products, payments, inventory, delivery and customer service can be managed properly. A simple payment form or quotation flow may be better than a full store for some businesses.",
+    "recommended_action": "Clarify product count, payment method, delivery, stock control, order notifications, refunds and who will maintain the store.",
+    "diy_possible": "Partly",
+    "when_to_call_axon": "Call Axon if online orders, payments, inventory or customer data must be handled properly.",
+    "recommended_service": "E-Commerce Solutions",
+    "related_page": "e-commerce-solutions.html",
+    "urgency": "medium",
+    "keywords": [
+      "ecommerce",
+      "e-commerce",
+      "online store",
+      "web store",
+      "woocommerce",
+      "shopify",
+      "sell online",
+      "online order",
+      "add cart",
+      "shopping cart"
+    ]
+  },
+  {
+    "id": "web-010",
+    "category": "Website Platform",
+    "question": "Should I use WordPress, Wix, Shopify, or custom website?",
+    "plain_english_answer": "The best platform depends on what the site must do. WordPress is flexible, Wix is easier for simple sites, Shopify is strong for online stores, and custom development is better for unique workflows or portals.",
+    "recommended_action": "Define the website purpose, editing needs, e-commerce needs, forms, SEO goals, budget and long-term maintenance.",
+    "diy_possible": "Partly",
+    "when_to_call_axon": "Call Axon before choosing a platform if the website affects business leads, payments or operations.",
+    "recommended_service": "Website Platform Advisory",
+    "related_page": "business-technology-help.html",
+    "urgency": "medium",
+    "keywords": [
+      "wordpress or wix",
+      "wix or wordpress",
+      "shopify or wordpress",
+      "website platform",
+      "custom website",
+      "cms",
+      "which website platform",
+      "website builder"
+    ],
+    "related_page_ph": "business-technology-help-philippines.html"
+  },
+  {
+    "id": "web-011",
+    "category": "Website Error",
+    "question": "My website shows an error or blank page.",
+    "plain_english_answer": "A blank page or error may be caused by PHP errors, plugin conflicts, broken theme files, server configuration, database issues, SSL/DNS issues or a recent update.",
+    "recommended_action": "Capture the exact error, check when it started, whether admin login works, and whether hosting logs show errors.",
+    "diy_possible": "Limited",
+    "when_to_call_axon": "Call Axon if the site is live, customers are affected or you are unsure what changed.",
+    "recommended_service": "Website Troubleshooting",
+    "related_page": "website-security-recovery-help.html",
+    "urgency": "high",
+    "keywords": [
+      "blank page",
+      "white screen",
+      "website error",
+      "500 error",
+      "php error",
+      "critical error",
+      "site error",
+      "website broken",
+      "fatal error"
+    ],
+    "related_page_ph": "website-hacked-help-philippines.html"
+  },
+  {
+    "id": "web-012",
+    "category": "Content Writing",
+    "question": "What content should I put on my business website?",
+    "plain_english_answer": "A business website should clearly say who you help, what problems you solve, what services you provide, where you operate, why customers should trust you, and how to contact you.",
+    "recommended_action": "Prepare service lists, target customers, locations, FAQs, case examples, photos, testimonials and contact details.",
+    "diy_possible": "Partly",
+    "when_to_call_axon": "Call Axon if you want the content structured for Google, AI search, and business enquiries.",
+    "recommended_service": "Website Content Architecture",
+    "related_page": "website-optimization-audit.html",
+    "urgency": "medium",
+    "keywords": [
+      "website content",
+      "what content",
+      "copywriting",
+      "service content",
+      "write website",
+      "website wording",
+      "content architecture",
+      "content for website"
+    ]
+  },
+  {
+    "id": "web-013",
+    "category": "Website Audit",
+    "question": "Can you check my website and tell me what is wrong?",
+    "plain_english_answer": "A basic website check should review the public page title, meta description, headings, mobile readiness, forms, tracking, schema, sitemap, robots.txt, speed clues and whether the site explains the business clearly.",
+    "recommended_action": "Use Analyze My Website, then share the website URL and what you want the site to achieve.",
+    "diy_possible": "Yes",
+    "when_to_call_axon": "Call Axon if the website affects enquiries, SEO, paid ads, credibility or AI search visibility.",
+    "recommended_service": "Website Optimization Audit",
+    "related_page": "website-optimization-audit.html",
+    "urgency": "medium",
+    "keywords": [
+      "website audit",
+      "check my website",
+      "analyze my website",
+      "review my website",
+      "website review",
+      "audit my site",
+      "what is wrong with my website"
+    ]
+  },
+  {
+    "id": "seo-001",
+    "category": "SEO / AEO / GEO",
+    "question": "What is the difference between SEO, AEO and GEO?",
+    "plain_english_answer": "SEO helps people find you on search engines. AEO helps answer engines understand and quote your answers. GEO helps generative AI systems understand your business, services, locations and authority.",
+    "recommended_action": "Review page titles, FAQs, service pages, schema, llms.txt, sitemap, internal links and content written in plain English.",
+    "diy_possible": "Partly",
+    "when_to_call_axon": "Call Axon if you want your website to be ready for both Google search and AI-style discovery.",
+    "recommended_service": "SEO, SEM, GEO & AEO",
+    "related_page": "seo-sem-geo-aeo.html",
+    "urgency": "medium",
+    "keywords": [
+      "seo",
+      "aeo",
+      "geo",
+      "generative engine optimization",
+      "answer engine optimization",
+      "ai search visibility",
+      "chatgpt visibility",
+      "llm friendly website"
+    ]
+  },
+  {
+    "id": "seo-002",
+    "category": "Google Analytics",
+    "question": "Do I need Google Analytics and Search Console?",
+    "plain_english_answer": "Yes, if your website matters to the business. Analytics shows visitor behavior, while Search Console shows how Google sees your website and whether pages are indexed or having issues.",
+    "recommended_action": "Set up GA4, Search Console, sitemap submission, conversion events and contact form tracking.",
+    "diy_possible": "Partly",
+    "when_to_call_axon": "Call Axon if you need proper tracking for enquiries, ads, SEO, conversions or reports.",
+    "recommended_service": "Analytics & Reporting",
+    "related_page": "analytics-reporting.html",
+    "urgency": "medium",
+    "keywords": [
+      "google analytics",
+      "ga4",
+      "search console",
+      "conversion tracking",
+      "analytics",
+      "gtag",
+      "gtm",
+      "google tag manager",
+      "tracking"
+    ]
+  },
+  {
+    "id": "seo-003",
+    "category": "Local SEO",
+    "question": "How can my business appear for local searches?",
+    "plain_english_answer": "Local visibility depends on your website content, service/location pages, Google Business Profile, consistent contact details, reviews, local keywords and trustworthy business information.",
+    "recommended_action": "Check your service area, local pages, map listing, reviews, contact details and page titles.",
+    "diy_possible": "Partly",
+    "when_to_call_axon": "Call Axon if local enquiries from Singapore, Philippines, Clark or Pampanga matter to your business.",
+    "recommended_service": "Local Business Visibility",
+    "related_page": "website-not-showing-on-google.html",
+    "urgency": "medium",
+    "keywords": [
+      "local seo",
+      "near me",
+      "local search",
+      "google maps",
+      "google business profile",
+      "business listing",
+      "singapore search",
+      "clark pampanga search"
+    ],
+    "related_page_ph": "website-not-showing-on-google-philippines.html"
+  },
+  {
+    "id": "seo-004",
+    "category": "Schema / Structured Data",
+    "question": "Do I need schema or structured data on my website?",
+    "plain_english_answer": "Schema helps search engines and AI systems understand your organization, services, FAQs, articles, breadcrumbs and contact information. It is not magic, but it supports clearer machine understanding.",
+    "recommended_action": "Add relevant Organization, LocalBusiness, Service, FAQ, Article and Breadcrumb schema where appropriate.",
+    "diy_possible": "Limited",
+    "when_to_call_axon": "Call Axon if you want structured data added correctly without confusing Google or AI systems.",
+    "recommended_service": "AI Search Visibility",
+    "related_page": "ai-search-visibility.html",
+    "urgency": "medium",
+    "keywords": [
+      "schema",
+      "structured data",
+      "json-ld",
+      "rich results",
+      "faq schema",
+      "organization schema",
+      "localbusiness schema",
+      "service schema"
+    ]
+  },
+  {
+    "id": "seo-005",
+    "category": "Sitemap / Robots",
+    "question": "What are sitemap.xml and robots.txt?",
+    "plain_english_answer": "A sitemap helps search engines discover important pages. Robots.txt gives crawling instructions. Wrong settings can stop pages from being discovered or indexed.",
+    "recommended_action": "Check that important pages are in the sitemap and that robots.txt does not block them.",
+    "diy_possible": "Partly",
+    "when_to_call_axon": "Call Axon before changing crawl/index rules on a live business website.",
+    "recommended_service": "SEO Technical Setup",
+    "related_page": "website-not-showing-on-google.html",
+    "urgency": "medium",
+    "keywords": [
+      "sitemap",
+      "sitemap.xml",
+      "robots.txt",
+      "robots",
+      "crawl",
+      "indexing",
+      "noindex",
+      "disallow"
+    ],
+    "related_page_ph": "website-not-showing-on-google-philippines.html"
   },
   {
     "id": "email-001",
     "category": "Business Email",
     "question": "Why are my emails going to spam?",
-    "plain_english_answer": "Emails often go to spam when SPF, DKIM, or DMARC records are missing or wrong, the domain reputation is weak, the message looks promotional, or the mail server is not trusted.",
-    "recommended_action": "Check domain DNS records, mail authentication, email content, sending reputation, and whether the domain or server is blacklisted.",
+    "plain_english_answer": "Emails often go to spam when SPF, DKIM or DMARC records are missing or wrong, the domain reputation is weak, the message looks promotional, or the mail server is not trusted.",
+    "recommended_action": "Check domain DNS records, mail authentication, email content, sending reputation and whether the domain or server is blacklisted.",
     "diy_possible": "Limited",
-    "when_to_call_axon": "Call Axon if staff emails are landing in spam, clients are not receiving emails, or email delivery affects business operations.",
+    "when_to_call_axon": "Call Axon if staff emails are landing in spam, clients are not receiving emails or email delivery affects business operations.",
     "recommended_service": "Business Email Solutions",
     "related_page": "business-email-solutions.html",
     "urgency": "high",
     "keywords": [
       "email spam",
-      "SPF",
-      "DKIM",
-      "DMARC",
+      "spf",
+      "dkim",
+      "dmarc",
       "email delivery",
-      "mail going spam"
+      "mail going spam",
+      "emails going to junk",
+      "spam folder",
+      "blacklisted email"
     ]
   },
   {
     "id": "email-002",
     "category": "Microsoft 365 / Google Workspace",
     "question": "Should my company use Google Workspace or Microsoft 365?",
-    "plain_english_answer": "Google Workspace is usually simpler for email, collaboration, and shared documents. Microsoft 365 is usually better when the company depends heavily on Outlook, Excel, Word, Teams, or Windows-based workflows.",
-    "recommended_action": "Review how staff work today, what email system they prefer, file sharing needs, budget, security, and migration complexity.",
+    "plain_english_answer": "Google Workspace is usually simpler for email, collaboration and shared documents. Microsoft 365 is usually better when the company depends heavily on Outlook, Excel, Word, Teams or Windows-based workflows.",
+    "recommended_action": "Review how staff work today, preferred email client, file sharing needs, budget, security and migration complexity.",
     "diy_possible": "Partly",
-    "when_to_call_axon": "Call Axon before migration if there are many users, old emails, shared mailboxes, domains, or business-critical email accounts.",
+    "when_to_call_axon": "Call Axon before migration if there are many users, old emails, shared mailboxes, domains or business-critical accounts.",
     "recommended_service": "Cloud & Email Solutions",
     "related_page": "business-email-solutions.html",
     "urgency": "medium",
     "keywords": [
-      "Google Workspace",
-      "Microsoft 365",
+      "google workspace",
+      "microsoft 365",
       "email migration",
       "business email",
       "gmail or outlook",
-      "office 365"
+      "office 365",
+      "m365",
+      "workspace vs 365",
+      "which email"
     ]
   },
   {
@@ -188,7 +558,8 @@
       "mail settings",
       "incoming mail",
       "outgoing mail",
-      "email setup"
+      "email setup",
+      "mail server settings"
     ]
   },
   {
@@ -207,7 +578,8 @@
       "gmail to outlook",
       "google workspace to microsoft 365",
       "move to 365",
-      "email migration"
+      "email migration",
+      "workspace migration"
     ]
   },
   {
@@ -225,51 +597,346 @@
       "365 to google",
       "outlook to gmail",
       "microsoft 365 to google workspace",
-      "office 365 to gmail"
+      "office 365 to gmail",
+      "m365 to google"
+    ]
+  },
+  {
+    "id": "email-006",
+    "category": "Email Setup",
+    "question": "I need a professional email address for my business.",
+    "plain_english_answer": "A business email should use your domain name, such as name@company.com. It can be set up using Google Workspace, Microsoft 365, cPanel email or another mail provider depending on budget and needs.",
+    "recommended_action": "Prepare your domain name, user list, preferred platform and whether you need old mail migrated.",
+    "diy_possible": "Partly",
+    "when_to_call_axon": "Call Axon if email must work reliably for staff, invoices, forms and customer communication.",
+    "recommended_service": "Business Email Setup",
+    "related_page": "business-email-solutions.html",
+    "urgency": "medium",
+    "keywords": [
+      "professional email",
+      "company email",
+      "business email setup",
+      "email address",
+      "domain email",
+      "name@company",
+      "create email",
+      "setup email account"
+    ]
+  },
+  {
+    "id": "email-007",
+    "category": "Email Down",
+    "question": "My company email is not working.",
+    "plain_english_answer": "Email may stop working because of DNS/MX problems, expired domain, mailbox password issues, storage full, provider outage, wrong Outlook settings or security blocking.",
+    "recommended_action": "Check webmail, password, mailbox storage, domain expiry, MX records and whether all users or only one user is affected.",
+    "diy_possible": "Partly",
+    "when_to_call_axon": "Call Axon if email affects customers, invoices, operations or multiple staff.",
+    "recommended_service": "Business Email Support",
+    "related_page": "business-email-solutions.html",
+    "urgency": "high",
+    "keywords": [
+      "email not working",
+      "mail down",
+      "cannot receive email",
+      "cannot send email",
+      "outlook not working",
+      "gmail not working",
+      "mailbox not working",
+      "email problem"
+    ]
+  },
+  {
+    "id": "email-008",
+    "category": "Shared Mailbox / Alias",
+    "question": "Should I use shared mailboxes, aliases or forwarding?",
+    "plain_english_answer": "Aliases are good for alternate addresses, forwarding is simple but can be messy, and shared mailboxes are better when a team must manage the same inbox together.",
+    "recommended_action": "List the addresses needed, who should access them, whether replies must be tracked and whether old mail should be retained.",
+    "diy_possible": "Partly",
+    "when_to_call_axon": "Call Axon if multiple staff share support, sales, billing, HR or enquiry mailboxes.",
+    "recommended_service": "Business Email Solutions",
+    "related_page": "business-email-solutions.html",
+    "urgency": "medium",
+    "keywords": [
+      "shared mailbox",
+      "email alias",
+      "email forwarding",
+      "distribution list",
+      "group email",
+      "sales@",
+      "support@",
+      "info@",
+      "catchall"
+    ]
+  },
+  {
+    "id": "email-009",
+    "category": "Email Security",
+    "question": "What is MFA and should staff use it for email?",
+    "plain_english_answer": "Multi-factor authentication adds an extra verification step when staff log in. It reduces the risk of account takeover even if a password is leaked.",
+    "recommended_action": "Enable MFA for admin and important user accounts, then train staff on recovery methods.",
+    "diy_possible": "Partly",
+    "when_to_call_axon": "Call Axon if you need to secure Google Workspace, Microsoft 365 or business email accounts without locking users out.",
+    "recommended_service": "Email & Account Security",
+    "related_page": "business-email-solutions.html",
+    "urgency": "high",
+    "keywords": [
+      "mfa",
+      "2fa",
+      "two factor",
+      "multi factor",
+      "email security",
+      "account hacked",
+      "password leaked",
+      "secure email"
+    ]
+  },
+  {
+    "id": "email-010",
+    "category": "Mailbox Storage",
+    "question": "My mailbox is full or email storage is running out.",
+    "plain_english_answer": "Mailbox storage problems can stop new mail from arriving and can slow down Outlook or webmail. The fix may involve archiving, upgrading the plan, cleaning old attachments or moving mail to a better platform.",
+    "recommended_action": "Check mailbox size, largest folders, attachments, retention needs and whether old mail must be kept for compliance.",
+    "diy_possible": "Partly",
+    "when_to_call_axon": "Call Axon if the mailbox contains important business history or many users have the same issue.",
+    "recommended_service": "Business Email Support",
+    "related_page": "business-email-solutions.html",
+    "urgency": "medium",
+    "keywords": [
+      "mailbox full",
+      "email storage",
+      "quota exceeded",
+      "mailbox quota",
+      "outlook full",
+      "archive email",
+      "pst",
+      "email archive"
+    ]
+  },
+  {
+    "id": "hosting-001",
+    "category": "Hosting / Domain",
+    "question": "My website is down. What should I check?",
+    "plain_english_answer": "A website may be down because of hosting issues, DNS problems, expired domain, expired SSL, server overload, coding error, malware or a recent update.",
+    "recommended_action": "Check domain expiry, DNS, hosting status, SSL, error message and whether email is also affected.",
+    "diy_possible": "Partly",
+    "when_to_call_axon": "Call Axon if the website affects enquiries, payment, customers or staff operations.",
+    "recommended_service": "Corporate Hosting",
+    "related_page": "corporate-hosting.html",
+    "urgency": "high",
+    "keywords": [
+      "website down",
+      "site down",
+      "hosting",
+      "server",
+      "cpanel",
+      "dns",
+      "ssl expired",
+      "not loading",
+      "host down",
+      "server error"
+    ]
+  },
+  {
+    "id": "domain-001",
+    "category": "Domain / DNS",
+    "question": "What are DNS, MX, SPF, DKIM and DMARC?",
+    "plain_english_answer": "DNS controls where your website and email point. MX points email to the mail provider. SPF, DKIM and DMARC help prove your emails are genuine and reduce spam problems.",
+    "recommended_action": "Do not change DNS records without knowing where website and email are hosted.",
+    "diy_possible": "Limited",
+    "when_to_call_axon": "Call Axon if DNS changes involve website, email, Microsoft 365, Google Workspace, forms or domain transfer.",
+    "recommended_service": "Domain Registration & Management",
+    "related_page": "domain-registration-management.html",
+    "urgency": "high",
+    "keywords": [
+      "dns",
+      "mx",
+      "spf",
+      "dkim",
+      "dmarc",
+      "nameserver",
+      "domain records",
+      "zone records",
+      "dns records"
+    ]
+  },
+  {
+    "id": "domain-002",
+    "category": "Domain Name",
+    "question": "My domain expired or I cannot access my domain.",
+    "plain_english_answer": "If a domain expires, the website and email can stop working. If you cannot access the domain account, recovery may require the registrar login, registered email or ownership documents.",
+    "recommended_action": "Check the registrar, expiry date, billing email and who controls the domain login.",
+    "diy_possible": "Limited",
+    "when_to_call_axon": "Call Axon urgently if the domain controls your business website or email.",
+    "recommended_service": "Domain Registration & Management",
+    "related_page": "domain-registration-management.html",
+    "urgency": "high",
+    "keywords": [
+      "domain expired",
+      "expired domain",
+      "domain renewal",
+      "cannot access domain",
+      "domain login",
+      "domain registrar",
+      "lost domain",
+      "renew domain"
+    ]
+  },
+  {
+    "id": "hosting-002",
+    "category": "SSL / HTTPS",
+    "question": "Why does my website show Not Secure?",
+    "plain_english_answer": "A Not Secure warning usually means the SSL certificate is missing, expired, installed incorrectly, or the site still loads some insecure HTTP resources.",
+    "recommended_action": "Check the SSL certificate, HTTPS redirect, mixed content and whether the domain points to the correct server.",
+    "diy_possible": "Partly",
+    "when_to_call_axon": "Call Axon if customers see warnings or forms/payments are involved.",
+    "recommended_service": "SSL & Website Security",
+    "related_page": "website-security-recovery-help.html",
+    "urgency": "high",
+    "keywords": [
+      "not secure",
+      "ssl",
+      "https",
+      "certificate expired",
+      "mixed content",
+      "ssl error",
+      "security warning",
+      "padlock"
+    ]
+  },
+  {
+    "id": "hosting-003",
+    "category": "cPanel Hosting",
+    "question": "What is cPanel hosting and is it enough for my business?",
+    "plain_english_answer": "cPanel hosting is suitable for many business websites and email setups, but the right plan depends on traffic, email usage, security, backups and whether you run applications.",
+    "recommended_action": "Review website platform, email needs, storage, traffic, backup needs and support expectations.",
+    "diy_possible": "Partly",
+    "when_to_call_axon": "Call Axon if hosting affects business operations or you need corporate support rather than mass-market hosting.",
+    "recommended_service": "Corporate Hosting",
+    "related_page": "corporate-hosting.html",
+    "urgency": "medium",
+    "keywords": [
+      "cpanel hosting",
+      "web hosting",
+      "corporate hosting",
+      "hosting plan",
+      "shared hosting",
+      "business hosting",
+      "hosting upgrade"
+    ]
+  },
+  {
+    "id": "hosting-004",
+    "category": "Backups",
+    "question": "Do I need website and email backups?",
+    "plain_english_answer": "Yes. Backups protect against accidental deletion, bad updates, malware, hosting failure and staff mistakes. Backups should be tested, not just promised.",
+    "recommended_action": "Check backup frequency, retention, restore process and whether website files, database and email are included.",
+    "diy_possible": "Partly",
+    "when_to_call_axon": "Call Axon if the website, email or database is important to daily operations.",
+    "recommended_service": "Backup & Recovery",
+    "related_page": "website-security-recovery-help.html",
+    "urgency": "high",
+    "keywords": [
+      "backup",
+      "website backup",
+      "email backup",
+      "restore",
+      "recovery",
+      "lost files",
+      "database backup",
+      "backup retention"
+    ]
+  },
+  {
+    "id": "hosting-005",
+    "category": "Server / VPS",
+    "question": "Do I need shared hosting, VPS or dedicated server?",
+    "plain_english_answer": "Shared hosting is fine for normal websites. VPS or dedicated servers are better when you need more control, performance, custom apps, larger email/storage needs or stronger isolation.",
+    "recommended_action": "Review traffic, app requirements, database load, email volume, security and budget.",
+    "diy_possible": "Partly",
+    "when_to_call_axon": "Call Axon if the server supports business-critical websites, applications or email.",
+    "recommended_service": "Server Setup & Management",
+    "related_page": "server-setup-deployment.html",
+    "urgency": "medium",
+    "keywords": [
+      "vps",
+      "dedicated server",
+      "server setup",
+      "cloud server",
+      "server management",
+      "hosting performance",
+      "server migration",
+      "server monitoring"
+    ]
+  },
+  {
+    "id": "hosting-006",
+    "category": "Domain Transfer",
+    "question": "Can I transfer my domain, website or email to Axon?",
+    "plain_english_answer": "Yes, but transfer planning is important because domain, DNS, website and email are connected. Wrong timing can cause downtime.",
+    "recommended_action": "Prepare domain registrar access, hosting access, DNS records, email provider details and preferred cutover time.",
+    "diy_possible": "Limited",
+    "when_to_call_axon": "Call Axon before changing nameservers, MX records or registrar settings.",
+    "recommended_service": "Domain & Hosting Migration",
+    "related_page": "domain-registration-management.html",
+    "urgency": "high",
+    "keywords": [
+      "transfer domain",
+      "move hosting",
+      "migrate website",
+      "change nameserver",
+      "move website",
+      "move domain",
+      "transfer hosting"
     ]
   },
   {
     "id": "ai-001",
     "category": "AI for Business",
     "question": "How can AI help my business if my staff are not technical?",
-    "plain_english_answer": "AI can help non-technical staff draft replies, summarize documents, prepare proposals, answer common customer questions, organize information, and reduce repetitive work. The key is to start with simple daily tasks, not complex systems.",
+    "plain_english_answer": "AI can help non-technical staff draft replies, summarize documents, prepare proposals, answer common customer questions, organize information and reduce repetitive work. The key is to start with simple daily tasks, not complex systems.",
     "recommended_action": "List repetitive work done by staff every week, then identify which tasks can be assisted by AI safely.",
     "diy_possible": "Yes",
-    "when_to_call_axon": "Call Axon if you want AI to be used properly across the company with business rules, privacy, staff guidance, and practical workflows.",
+    "when_to_call_axon": "Call Axon if you want AI to be used properly across the company with business rules, privacy, staff guidance and practical workflows.",
     "recommended_service": "AI Readiness & Adoption",
     "related_page": "ai-advisory-for-business-owners.html",
-    "related_page_ph": "ai-advisory-philippines.html",
     "urgency": "low",
     "keywords": [
-      "AI for business",
-      "AI adoption",
+      "ai for business",
+      "ai adoption",
       "non technical staff",
       "productivity",
-      "chatgpt for business"
-    ]
+      "chatgpt for business",
+      "ai help",
+      "ai tools",
+      "business ai"
+    ],
+    "related_page_ph": "ai-advisory-philippines.html"
   },
   {
     "id": "ai-002",
     "category": "AI Chatbot / Assistant",
     "question": "Do I need a chatbot or an AI assistant on my website?",
     "plain_english_answer": "A chatbot is useful when visitors often ask repeated questions. An AI assistant is better when you want visitors to explain their problem and receive guided recommendations. For business websites, the assistant should help qualify enquiries, not just answer basic FAQs.",
-    "recommended_action": "Review your common customer questions, services, enquiry flow, and whether the website already explains things clearly.",
+    "recommended_action": "Review your common customer questions, services, enquiry flow and whether the website already explains things clearly.",
     "diy_possible": "Partly",
-    "when_to_call_axon": "Call Axon if you want the assistant to recommend services, guide visitors, and connect to your business enquiry process.",
+    "when_to_call_axon": "Call Axon if you want the assistant to recommend services, guide visitors and connect to your business enquiry process.",
     "recommended_service": "Website AI Chatbot / AI Assistant",
     "related_page": "ai-advisory-for-business-owners.html",
-    "related_page_ph": "ai-advisory-philippines.html",
     "urgency": "medium",
     "keywords": [
-      "AI chatbot",
+      "ai chatbot",
       "chatbot",
-      "AI assistant",
+      "ai assistant",
       "website enquiry",
-      "Ask Axon",
+      "ask axon",
       "customer ai",
       "chat bot",
-      "i want a chatbot"
-    ]
+      "i want a chatbot",
+      "website chatbot",
+      "virtual assistant",
+      "ai agent"
+    ],
+    "related_page_ph": "ai-advisory-philippines.html"
   },
   {
     "id": "ai-003",
@@ -285,43 +952,114 @@
     "keywords": [
       "ai search",
       "chatgpt search",
-      "GEO",
-      "AEO",
+      "geo",
+      "aeo",
       "llms.txt",
       "generative engine",
-      "answer engine"
+      "answer engine",
+      "ai visibility",
+      "recommended by chatgpt"
     ]
   },
   {
-    "id": "security-001",
-    "category": "Cybersecurity",
-    "question": "How do I know if my website has been hacked?",
-    "plain_english_answer": "Common warning signs include unknown pages, strange redirects, spam links, browser security warnings, sudden traffic drops, blocked emails, or Google showing unsafe website warnings.",
-    "recommended_action": "Check website files, admin users, plugins, redirects, server logs, Google Search Console, and malware scan results.",
-    "diy_possible": "Limited",
-    "when_to_call_axon": "Call Axon urgently if customers see warnings, your site redirects elsewhere, or Google marks the website as unsafe.",
-    "recommended_service": "Website Security & Recovery",
-    "related_page": "website-security-recovery-help.html",
-    "related_page_ph": "website-hacked-help-philippines.html",
-    "urgency": "high",
+    "id": "ai-004",
+    "category": "Company AI Workspace",
+    "question": "Should my company have a shared AI workspace?",
+    "plain_english_answer": "A shared AI workspace is useful when staff use AI for company work and the company wants shared knowledge, consistent guidance, controlled usage and better productivity.",
+    "recommended_action": "Define users, departments, common tasks, privacy rules, company knowledge and what should remain private.",
+    "diy_possible": "Partly",
+    "when_to_call_axon": "Call Axon if you want AI to support company knowledge without every staff member working in separate AI chats.",
+    "recommended_service": "Company AI Workspace",
+    "related_page": "ai-advisory-for-business-owners.html",
+    "urgency": "medium",
     "keywords": [
-      "website hacked",
-      "malware",
-      "security warning",
-      "website recovery",
-      "virus",
-      "blacklist",
-      "redirect hack"
-    ]
+      "company ai",
+      "ai workspace",
+      "team ai",
+      "shared ai",
+      "company brain",
+      "ai knowledge base",
+      "staff ai",
+      "business ai workspace"
+    ],
+    "related_page_ph": "ai-advisory-philippines.html"
+  },
+  {
+    "id": "ai-005",
+    "category": "AI Policy",
+    "question": "Do we need rules for staff using AI?",
+    "plain_english_answer": "Yes. Staff should know what information can be used with AI, what must stay private, when to verify outputs, and who approves customer-facing or legal/financial content.",
+    "recommended_action": "Create simple AI usage rules, examples of allowed tasks, privacy reminders and approval steps.",
+    "diy_possible": "Partly",
+    "when_to_call_axon": "Call Axon if you need practical AI adoption guidance for non-technical staff.",
+    "recommended_service": "AI Readiness & Adoption",
+    "related_page": "ai-advisory-for-business-owners.html",
+    "urgency": "medium",
+    "keywords": [
+      "ai policy",
+      "ai rules",
+      "staff using ai",
+      "ai governance",
+      "ai privacy",
+      "safe ai",
+      "company ai policy"
+    ],
+    "related_page_ph": "ai-advisory-philippines.html"
+  },
+  {
+    "id": "ai-006",
+    "category": "AI Automation",
+    "question": "Can AI automate customer replies or internal work?",
+    "plain_english_answer": "AI can assist with drafts, summaries, classification, routing and reminders, but important business processes still need rules, human review and safe handover to staff.",
+    "recommended_action": "List the repetitive tasks, data sources, approval steps and what should never be automated.",
+    "diy_possible": "Partly",
+    "when_to_call_axon": "Call Axon if AI must connect to forms, email, CRM, documents, WhatsApp or staff workflows.",
+    "recommended_service": "AI & Business Automation",
+    "related_page": "ai-advisory-for-business-owners.html",
+    "urgency": "medium",
+    "keywords": [
+      "ai automation",
+      "automate replies",
+      "ai workflow",
+      "ai assistant for staff",
+      "automate work",
+      "ai process",
+      "ai email reply",
+      "ai summary"
+    ],
+    "related_page_ph": "ai-advisory-philippines.html"
+  },
+  {
+    "id": "ai-007",
+    "category": "AI Tool Selection",
+    "question": "Which AI tool should my business use?",
+    "plain_english_answer": "The best AI tool depends on staff skill, privacy needs, documents, email, workflows, budget and whether the company needs shared knowledge or only individual productivity.",
+    "recommended_action": "Compare the task, users, data sensitivity, cost and support requirements before subscribing.",
+    "diy_possible": "Partly",
+    "when_to_call_axon": "Call Axon if you need an AI tool selected and introduced properly for your business.",
+    "recommended_service": "AI Tool & Platform Selection",
+    "related_page": "ai-advisory-for-business-owners.html",
+    "urgency": "medium",
+    "keywords": [
+      "which ai tool",
+      "best ai tool",
+      "chatgpt or claude",
+      "gemini",
+      "kimi",
+      "openai",
+      "ai subscription",
+      "ai platform"
+    ],
+    "related_page_ph": "ai-advisory-philippines.html"
   },
   {
     "id": "automation-001",
     "category": "Business Automation",
-    "question": "Can I automate quotations, invoices, and customer follow-ups?",
-    "plain_english_answer": "Yes. Many quotation, invoice, reminder, and follow-up tasks can be automated using forms, email templates, CRM tools, payment links, and workflow automation. The best solution depends on how your team currently handles enquiries and payments.",
-    "recommended_action": "Map the current process from enquiry to quotation, approval, invoice, payment, and follow-up.",
+    "question": "Can I automate quotations, invoices and customer follow-ups?",
+    "plain_english_answer": "Yes. Many quotation, invoice, reminder and follow-up tasks can be automated using forms, email templates, CRM tools, payment links and workflow automation. The best solution depends on how your team currently handles enquiries and payments.",
+    "recommended_action": "Map the current process from enquiry to quotation, approval, invoice, payment and follow-up.",
     "diy_possible": "Partly",
-    "when_to_call_axon": "Call Axon if the process involves multiple staff, repeated manual work, missed follow-ups, or customer delays.",
+    "when_to_call_axon": "Call Axon if the process involves multiple staff, repeated manual work, missed follow-ups or customer delays.",
     "recommended_service": "Business Process Automation",
     "related_page": "business-process-automation.html",
     "urgency": "medium",
@@ -332,7 +1070,9 @@
       "follow up",
       "workflow",
       "reminder",
-      "customer follow up"
+      "customer follow up",
+      "manual work",
+      "business process"
     ]
   },
   {
@@ -347,12 +1087,36 @@
     "related_page": "crm-lead-management.html",
     "urgency": "medium",
     "keywords": [
-      "CRM",
+      "crm",
       "lead management",
       "sales pipeline",
       "customer database",
       "follow up leads",
-      "enquiry management"
+      "enquiry management",
+      "manage leads",
+      "lead tracking",
+      "customer management"
+    ]
+  },
+  {
+    "id": "crm-002",
+    "category": "WhatsApp CRM",
+    "question": "Can I manage WhatsApp enquiries better?",
+    "plain_english_answer": "If many enquiries come through WhatsApp, you may need a simple process to capture leads, assign staff, record follow-ups and avoid losing customer conversations.",
+    "recommended_action": "Review how enquiries arrive, who replies, what information must be captured and how follow-ups are tracked.",
+    "diy_possible": "Partly",
+    "when_to_call_axon": "Call Axon if WhatsApp enquiries are important for sales, support or customer service.",
+    "recommended_service": "WhatsApp CRM & Lead Management",
+    "related_page": "crm-lead-management.html",
+    "urgency": "medium",
+    "keywords": [
+      "whatsapp crm",
+      "whatsapp leads",
+      "whatsapp enquiry",
+      "whatsapp business",
+      "manage whatsapp",
+      "whatsapp follow up",
+      "whatsapp automation"
     ]
   },
   {
@@ -365,7 +1129,6 @@
     "when_to_call_axon": "Call Axon if the payment flow must connect to your website, forms, invoices, booking or customer records.",
     "recommended_service": "Payment Gateway Setup",
     "related_page": "payment-gateway-help.html",
-    "related_page_ph": "payment-gateway-help-philippines.html",
     "urgency": "medium",
     "keywords": [
       "payment gateway",
@@ -376,8 +1139,34 @@
       "gcash",
       "xendit",
       "checkout",
-      "credit card"
-    ]
+      "credit card",
+      "payment link",
+      "card payment"
+    ],
+    "related_page_ph": "payment-gateway-help-philippines.html"
+  },
+  {
+    "id": "payment-002",
+    "category": "Payment Troubleshooting",
+    "question": "Why did my website payment fail?",
+    "plain_english_answer": "Payment failures can happen because of gateway settings, test/live mode confusion, webhook errors, currency issues, SSL, checkout errors, bank verification or form integration problems.",
+    "recommended_action": "Check the gateway dashboard, test/live keys, error message, webhook logs, SSL and whether the order was recorded.",
+    "diy_possible": "Limited",
+    "when_to_call_axon": "Call Axon if payments affect revenue, bookings, invoices or customer trust.",
+    "recommended_service": "Payment Gateway Troubleshooting",
+    "related_page": "payment-gateway-help.html",
+    "urgency": "high",
+    "keywords": [
+      "payment failed",
+      "checkout failed",
+      "stripe error",
+      "paypal error",
+      "gcash error",
+      "webhook",
+      "payment not received",
+      "card declined"
+    ],
+    "related_page_ph": "payment-gateway-help-philippines.html"
   },
   {
     "id": "app-001",
@@ -401,71 +1190,253 @@
       "inventory system",
       "staff attendance",
       "school portal",
-      "restaurant ordering"
+      "restaurant ordering",
+      "customer portal",
+      "member portal"
     ]
   },
   {
-    "id": "hosting-001",
-    "category": "Hosting / Domain",
-    "question": "My website is down. What should I check?",
-    "plain_english_answer": "A website may be down because of hosting issues, DNS problems, expired domain, expired SSL, server overload, coding error, malware, or a recent update.",
-    "recommended_action": "Check domain expiry, DNS, hosting status, SSL, error message and whether email is also affected.",
+    "id": "app-002",
+    "category": "Inventory System",
+    "question": "Can I create an inventory system for my business?",
+    "plain_english_answer": "Yes, but the system must match how stock moves in real life. Inventory needs product records, stock in/out, users, reports, alerts, locations and sometimes barcode or POS integration.",
+    "recommended_action": "List product types, locations, users, stock movement, reports and whether sales/POS should connect.",
     "diy_possible": "Partly",
-    "when_to_call_axon": "Call Axon if the website affects enquiries, payment, customers or staff operations.",
-    "recommended_service": "Corporate Hosting",
-    "related_page": "corporate-hosting.html",
-    "urgency": "high",
-    "keywords": [
-      "website down",
-      "site down",
-      "hosting",
-      "server",
-      "cpanel",
-      "dns",
-      "ssl expired",
-      "not loading"
-    ]
-  },
-  {
-    "id": "domain-001",
-    "category": "Domain / DNS",
-    "question": "What are DNS, MX, SPF, DKIM and DMARC?",
-    "plain_english_answer": "DNS controls where your website and email point. MX points email to the mail provider. SPF, DKIM and DMARC help prove your emails are genuine and reduce spam problems.",
-    "recommended_action": "Do not change DNS records without knowing where website and email are hosted.",
-    "diy_possible": "Limited",
-    "when_to_call_axon": "Call Axon if DNS changes involve website, email, Microsoft 365, Google Workspace, forms or domain transfer.",
-    "recommended_service": "Domain Registration & Management",
-    "related_page": "domain-registration-management.html",
-    "urgency": "high",
-    "keywords": [
-      "DNS",
-      "MX",
-      "SPF",
-      "DKIM",
-      "DMARC",
-      "nameserver",
-      "domain records"
-    ]
-  },
-  {
-    "id": "ads-001",
-    "category": "SEM / Google Ads",
-    "question": "Should I run Google Ads for my business website?",
-    "plain_english_answer": "Google Ads can work if the landing page is clear, the offer is specific, tracking is set up, and the campaign targets high-intent searches. Ads are risky if the website is weak or the enquiry process is unclear.",
-    "recommended_action": "Check landing page, call-to-action, tracking, search terms, budget and how leads are followed up.",
-    "diy_possible": "Partly",
-    "when_to_call_axon": "Call Axon if you need landing pages, GA4, conversion tracking, Search Console or SEO/SEM structure.",
-    "recommended_service": "SEO, SEM, GEO & AEO",
-    "related_page": "seo-sem-geo-aeo.html",
+    "when_to_call_axon": "Call Axon if inventory affects operations, sales, purchasing or multiple branches.",
+    "recommended_service": "Business Applications",
+    "related_page": "business-applications.html",
     "urgency": "medium",
     "keywords": [
-      "Google Ads",
-      "SEM",
-      "paid ads",
-      "landing page",
-      "conversion tracking",
-      "campaign"
+      "inventory",
+      "stock system",
+      "stock management",
+      "warehouse",
+      "barcode",
+      "product stock",
+      "inventory app",
+      "inventory software"
     ]
+  },
+  {
+    "id": "app-003",
+    "category": "HR / Attendance",
+    "question": "Can I track staff attendance and HR records?",
+    "plain_english_answer": "Yes. A staff attendance system can track time in/out, leave, approvals and reports, but it must fit your payroll and HR process.",
+    "recommended_action": "Define staff count, branches, approval flow, mobile/geolocation needs, reports and payroll connection.",
+    "diy_possible": "Partly",
+    "when_to_call_axon": "Call Axon if attendance affects payroll, compliance, branches or management reports.",
+    "recommended_service": "Business Applications",
+    "related_page": "business-applications.html",
+    "urgency": "medium",
+    "keywords": [
+      "staff attendance",
+      "hr system",
+      "leave application",
+      "time in",
+      "time out",
+      "employee portal",
+      "attendance app",
+      "payroll"
+    ]
+  },
+  {
+    "id": "app-004",
+    "category": "Booking System",
+    "question": "Can I add booking or appointment scheduling to my website?",
+    "plain_english_answer": "Yes. Booking systems can help clinics, consultants, restaurants, salons, coaches and service businesses manage appointments, reminders and payments.",
+    "recommended_action": "Define services, staff availability, time slots, reminders, payment needs and cancellation rules.",
+    "diy_possible": "Partly",
+    "when_to_call_axon": "Call Axon if booking must connect to forms, payments, CRM, email or WhatsApp.",
+    "recommended_service": "Business Applications",
+    "related_page": "business-applications.html",
+    "urgency": "medium",
+    "keywords": [
+      "booking system",
+      "appointment",
+      "scheduling",
+      "calendar booking",
+      "online booking",
+      "reservation",
+      "appointment reminder"
+    ]
+  },
+  {
+    "id": "app-005",
+    "category": "ERP / Operations",
+    "question": "Do I need ERP, Odoo or ERPNext?",
+    "plain_english_answer": "ERP can help when many departments share operations, inventory, sales, purchasing, accounting or approvals. It may be too heavy if the business only needs a simple CRM or workflow first.",
+    "recommended_action": "Map the business process, users, departments, reports, budget and whether customization is needed.",
+    "diy_possible": "Limited",
+    "when_to_call_axon": "Call Axon before committing to ERP if the system will affect daily operations.",
+    "recommended_service": "Business Applications",
+    "related_page": "business-applications.html",
+    "urgency": "medium",
+    "keywords": [
+      "erp",
+      "odoo",
+      "erpnext",
+      "accounting system",
+      "operations system",
+      "purchase order",
+      "sales order",
+      "custom erp"
+    ]
+  },
+  {
+    "id": "app-006",
+    "category": "Reports / Dashboard",
+    "question": "Can I create a dashboard for management reports?",
+    "plain_english_answer": "Yes. Dashboards are useful when data is already being captured consistently. If data is scattered, the first step is to clean the process and data source.",
+    "recommended_action": "Identify the data sources, reports needed, update frequency, users and decisions the dashboard should support.",
+    "diy_possible": "Partly",
+    "when_to_call_axon": "Call Axon if reports must pull from website forms, CRM, spreadsheets, databases or cloud tools.",
+    "recommended_service": "Business Applications",
+    "related_page": "business-applications.html",
+    "urgency": "medium",
+    "keywords": [
+      "dashboard",
+      "reporting",
+      "management report",
+      "analytics dashboard",
+      "kpi dashboard",
+      "business intelligence",
+      "power bi",
+      "looker studio"
+    ]
+  },
+  {
+    "id": "security-001",
+    "category": "Cybersecurity",
+    "question": "How do I know if my website has been hacked?",
+    "plain_english_answer": "Common warning signs include unknown pages, strange redirects, spam links, browser security warnings, sudden traffic drops, blocked emails or Google showing unsafe website warnings.",
+    "recommended_action": "Check website files, admin users, plugins, redirects, server logs, Google Search Console and malware scan results.",
+    "diy_possible": "Limited",
+    "when_to_call_axon": "Call Axon urgently if customers see warnings, your site redirects elsewhere or Google marks the website as unsafe.",
+    "recommended_service": "Website Security & Recovery",
+    "related_page": "website-security-recovery-help.html",
+    "urgency": "high",
+    "keywords": [
+      "website hacked",
+      "malware",
+      "security warning",
+      "website recovery",
+      "virus",
+      "blacklist",
+      "redirect hack",
+      "site hacked",
+      "unsafe website"
+    ],
+    "related_page_ph": "website-hacked-help-philippines.html"
+  },
+  {
+    "id": "security-002",
+    "category": "Phishing / Scam Email",
+    "question": "How do I protect staff from phishing emails?",
+    "plain_english_answer": "Phishing protection needs email authentication, spam filtering, MFA, staff awareness, safe password practices and a process for reporting suspicious emails.",
+    "recommended_action": "Check SPF/DKIM/DMARC, MFA, admin accounts, spam settings and staff training.",
+    "diy_possible": "Partly",
+    "when_to_call_axon": "Call Axon if phishing could affect payments, invoices, customer data or company email accounts.",
+    "recommended_service": "Email & Cybersecurity",
+    "related_page": "business-email-solutions.html",
+    "urgency": "high",
+    "keywords": [
+      "phishing",
+      "scam email",
+      "fake invoice",
+      "email fraud",
+      "business email compromise",
+      "spoofing",
+      "suspicious email"
+    ]
+  },
+  {
+    "id": "security-003",
+    "category": "WordPress Security",
+    "question": "How do I keep WordPress safe?",
+    "plain_english_answer": "WordPress security depends on updates, strong admin accounts, trusted plugins, backups, malware scanning, firewall rules and avoiding abandoned themes or plugins.",
+    "recommended_action": "Review admin users, plugins, theme updates, backups, login protection and hosting security.",
+    "diy_possible": "Partly",
+    "when_to_call_axon": "Call Axon if the site is business-critical, has forms, takes payments or was previously hacked.",
+    "recommended_service": "Website Security & Recovery",
+    "related_page": "website-security-recovery-help.html",
+    "urgency": "medium",
+    "keywords": [
+      "wordpress security",
+      "wordpress update",
+      "plugin update",
+      "wordpress hacked",
+      "wordpress malware",
+      "wp admin",
+      "theme update"
+    ]
+  },
+  {
+    "id": "support-001",
+    "category": "Remote IT Support",
+    "question": "Can Axon support us remotely?",
+    "plain_english_answer": "Yes. Many website, email, hosting, DNS, cloud and AI support tasks can be handled remotely if proper access and screenshots are provided.",
+    "recommended_action": "Share the issue, domain, affected users, screenshots, admin access method and urgency.",
+    "diy_possible": "Yes",
+    "when_to_call_axon": "Call Axon when remote support can solve the issue faster than waiting for an on-site visit.",
+    "recommended_service": "Remote IT Support",
+    "related_page": "it-support-singapore.html",
+    "urgency": "medium",
+    "keywords": [
+      "remote support",
+      "remote it",
+      "support desk",
+      "helpdesk",
+      "it support",
+      "online support",
+      "remote help"
+    ],
+    "related_page_ph": "remote-it-support-philippines.html"
+  },
+  {
+    "id": "support-002",
+    "category": "IT Retainer",
+    "question": "Should my company have monthly IT or website support?",
+    "plain_english_answer": "Monthly support is useful when technology affects daily operations and the company needs predictable help for website, email, hosting, domains, security or small changes.",
+    "recommended_action": "List recurring issues, number of users, website changes, email support needs and critical systems.",
+    "diy_possible": "Partly",
+    "when_to_call_axon": "Call Axon if ad-hoc fixes are becoming disruptive or business-critical systems need continuity.",
+    "recommended_service": "IT & Website Support",
+    "related_page": "it-support-singapore.html",
+    "urgency": "medium",
+    "keywords": [
+      "monthly support",
+      "retainer",
+      "it retainer",
+      "website retainer",
+      "support contract",
+      "maintenance plan",
+      "ongoing support"
+    ],
+    "related_page_ph": "remote-it-support-philippines.html"
+  },
+  {
+    "id": "support-003",
+    "category": "Project Planning",
+    "question": "How much will a website, AI, email or automation project cost?",
+    "plain_english_answer": "Cost depends on scope, users, integrations, content, design, data migration, security, hosting and support. A short discovery is needed before giving a reliable estimate.",
+    "recommended_action": "Prepare the business goal, current system, must-have features, nice-to-have features, timeline and budget range.",
+    "diy_possible": "Yes",
+    "when_to_call_axon": "Call Axon if you need a practical scope and phased approach before spending money.",
+    "recommended_service": "Technology Project Planning",
+    "related_page": "business-technology-help.html",
+    "urgency": "medium",
+    "keywords": [
+      "how much",
+      "cost",
+      "price",
+      "budget",
+      "quotation",
+      "proposal",
+      "timeline",
+      "project cost",
+      "estimate"
+    ],
+    "related_page_ph": "business-technology-help-philippines.html"
   },
   {
     "id": "workspace-001",
@@ -484,7 +1455,51 @@
       "onedrive",
       "sharepoint",
       "document management",
-      "file sharing"
+      "file sharing",
+      "cloud files",
+      "team drive"
+    ]
+  },
+  {
+    "id": "workspace-002",
+    "category": "Microsoft Teams / Google Meet",
+    "question": "Should we use Teams, Google Meet or Zoom?",
+    "plain_english_answer": "The best meeting tool depends on your email platform, staff habits, calendar use, recording needs and client expectations.",
+    "recommended_action": "Review whether your company uses Google Workspace, Microsoft 365, Zoom, shared calendars and meeting rooms.",
+    "diy_possible": "Yes",
+    "when_to_call_axon": "Call Axon if meeting tools must connect with email, calendars, accounts and staff onboarding.",
+    "recommended_service": "Cloud & Email Solutions",
+    "related_page": "business-email-solutions.html",
+    "urgency": "low",
+    "keywords": [
+      "teams",
+      "google meet",
+      "zoom",
+      "online meeting",
+      "video meeting",
+      "calendar invite",
+      "meeting setup"
+    ]
+  },
+  {
+    "id": "workspace-003",
+    "category": "Staff Onboarding / Offboarding",
+    "question": "How should we handle IT when staff join or leave?",
+    "plain_english_answer": "Staff onboarding/offboarding should cover email, passwords, MFA, files, apps, devices, shared folders, groups and ownership of business data.",
+    "recommended_action": "Prepare a checklist for account creation, access rights, device setup, handover and account removal.",
+    "diy_possible": "Partly",
+    "when_to_call_axon": "Call Axon if staff access involves Google Workspace, Microsoft 365, shared files, websites, CRM or business systems.",
+    "recommended_service": "Cloud & Email Solutions",
+    "related_page": "business-email-solutions.html",
+    "urgency": "high",
+    "keywords": [
+      "staff onboarding",
+      "staff leaving",
+      "offboarding",
+      "new staff email",
+      "remove staff access",
+      "employee access",
+      "user account"
     ]
   }
 ]
