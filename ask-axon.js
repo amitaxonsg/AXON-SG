@@ -21,10 +21,10 @@
 
   const axonIntentProfiles = [
     { key: 'email_setup', label: 'IMAP / SMTP / Business Email Setup', service: 'Business Email Solutions', keywords: ['imap','smtp','pop3','incoming mail','outgoing mail','mail server','email setup','outlook setup','gmail setup','mail settings','port 993','port 587','port 465','business email','email not working','mailbox','mx','spf','dkim','dmarc'], pages: [['Business Email Solutions','business-email-solutions.html'], ['Business Email Migration Help', page('business-email-migration-help.html','business-email-migration-philippines.html')], ['Google Workspace / Microsoft 365 Help', page('google-workspace-to-microsoft-365-migration.html','google-workspace-consultant-philippines.html')]] },
-    { key: 'crm', label: 'CRM / Lead Management', service: 'CRM & Lead Management', keywords: ['crm','lead management','lead tracking','sales pipeline','customer database','follow up','follow-up','client management','customer management','enquiry management','manage leads'], pages: [['CRM & Lead Management','crm-lead-management.html'], ['Business Applications','business-applications.html'], ['Business Technology Help', page('business-technology-help.html','business-technology-help-philippines.html')]] },
+    { key: 'crm', label: 'CRM / Lead Management', service: 'CRM & Lead Management', keywords: ['crm','lead management','lead tracking','sales pipeline','customer database','customer relationship','follow up','follow-up','leads','manage leads','client management','customer management','enquiry management'], pages: [['CRM & Lead Management','crm-lead-management.html'], ['Business Applications','business-applications.html'], ['Business Technology Help', page('business-technology-help.html','business-technology-help-philippines.html')]] },
     { key: 'payment', label: 'Payment Gateway / Online Payment', service: 'Payment Gateway Setup', keywords: ['payment gateway','online payment','payment link','checkout','stripe','paynow','paypal','xendit','hitpay','gcash','card payment','credit card','payment'], pages: [['Payment Gateway Help', page('payment-gateway-help.html','payment-gateway-help-philippines.html')], ['Payment Gateway Setup','payment-gateway-setup.html'], ['Quotes & Invoice Automation','quotes-invoice-automation.html']] },
     { key: 'forms', label: 'Website Form / Email Delivery', service: 'Website Forms & Email Delivery', keywords: ['form not sending','forms not working','contact form','enquiry form','form email','not receiving enquiry','mail not sending','website form'], pages: [['Website Form Not Sending Email', page('website-form-not-sending-email.html','website-form-not-sending-email-philippines.html')], ['Business Email Solutions','business-email-solutions.html'], ['Website Maintenance & Support','website-maintenance-support.html']] },
-    { key: 'visibility', label: 'Google / SEO / AI Search Visibility', service: 'SEO, GEO & AEO', keywords: ['seo','google','not showing on google','ranking','search console','analytics','business profile','maps','visibility','ai search','geo','aeo','llms.txt','chatgpt search'], pages: [['Website Not Showing on Google', page('website-not-showing-on-google.html','website-not-showing-on-google-philippines.html')], ['AI Search Visibility','ai-search-visibility.html'], ['SEO, SEM, GEO & AEO','seo-sem-geo-aeo.html']] },
+    { key: 'visibility', label: 'Google / SEO / AI Search Visibility', service: 'SEO, GEO & AEO', keywords: ['seo','sem','google','not showing on google','ranking','search console','analytics','business profile','maps','visibility','ai search','geo','aeo','llms.txt','chatgpt search'], pages: [['Website Not Showing on Google', page('website-not-showing-on-google.html','website-not-showing-on-google-philippines.html')], ['AI Search Visibility','ai-search-visibility.html'], ['SEO, SEM, GEO & AEO','seo-sem-geo-aeo.html']] },
     { key: 'security', label: 'Website Security / Recovery', service: 'Security, Recovery & Performance', keywords: ['hacked','malware','virus','security warning','blacklist','website warning','ssl warning','restore','backup','recovery'], pages: [['Website Hacked Help', page('website-hacked-help.html','website-hacked-help-philippines.html')], ['Website Security','website-security.html'], ['Website Recovery','website-recovery.html']] },
     { key: 'ai_chatbot', label: 'AI Chatbot / AI Assistant', service: 'Website AI Chatbot', keywords: ['chatbot','chat bot','ai assistant','website ai','customer ai','ai enquiry','ai reply','ai automation'], pages: [['Website AI Chatbot','website-ai-chatbot.html'], ['AI Advisory for Business Owners', page('ai-advisory-for-business-owners.html','ai-advisory-philippines.html')], ['Business Process Automation','business-process-automation.html']] },
     { key: 'ai_app', label: 'AI App / Business Application', service: 'Business Applications', keywords: ['ai app','app using ai','lovable','bolt','replit','saas','portal','dashboard','business app','inventory system','hr system','staff attendance','restaurant ordering','school portal','member login','customer portal'], pages: [['Business Applications','business-applications.html'], ['AI Website & App Publishing','ai-website-app-publishing.html'], ['AI Advisory for Business Owners', page('ai-advisory-for-business-owners.html','ai-advisory-philippines.html')]] },
@@ -53,6 +53,8 @@
   function showSubmitBox() { submitBox?.classList.add('open'); }
   function normalizeText(value) { return String(value || '').toLowerCase().replace(/[^a-z0-9+.]+/g, ' ').trim(); }
   function escapeHtml(value) { return String(value || '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&#39;'); }
+  function yesNo(value) { return value ? 'Detected' : 'Not detected'; }
+  function valueOrNone(value) { return value ? String(value) : 'Not detected'; }
 
   function detectIntent(question) {
     const text = normalizeText(question);
@@ -86,7 +88,7 @@
   }
 
   function websiteAuditPrompt() {
-    return `You are Ask Axon, Axon 1ProIT's AI Website Advisor for non-IT business owners. The user submitted a website URL and Axon ran a basic public website check. Use the scan results as the basis of your advice. Do not invent private analytics, server access, backend access or full code review. Clearly say this is a basic public single-page check, not a full technical audit. Structure the answer exactly like this: 1. Quick verdict, 2. What looks good, 3. What may be weak or missing, 4. SEO / AEO / AI-search visibility feedback, 5. Website trust and conversion feedback, 6. What to fix first, 7. When Axon should help, 8. Recommended Axon pages to read. Be specific and practical. Mention title, description, H1, canonical, mobile viewport, schema, Open Graph, robots.txt, sitemap.xml, llms.txt, analytics/tag clues, forms, WhatsApp/mail links, platform clue, page size, scripts, images and missing alt text when present.`;
+    return `You are Ask Axon, Axon 1ProIT's AI Website Advisor for non-IT business owners. Axon ran a basic public single-page website check and the scan details are included in the user message. Use those scan details as evidence. Do not invent private analytics, server access, backend access, Google Search Console data, PageSpeed scores or full code review. The final answer must be practical and must include improvement suggestions. Structure the answer exactly like this: 1. Quick verdict, 2. What looks good, 3. What may be weak or missing, 4. SEO / AEO / AI-search visibility feedback, 5. Website trust and conversion feedback, 6. What to fix first, 7. When Axon should help, 8. Recommended Axon pages to read. Mention title, meta description, H1, canonical, mobile viewport, schema, Open Graph, robots.txt, sitemap.xml, llms.txt, analytics/tag clues, forms, WhatsApp/mail links, likely website engine/platform, page size, scripts, images and missing alt text when present.`;
   }
 
   function templateAnswer(question, profile) {
@@ -125,6 +127,78 @@
     return `${reply.trim()}\n\n${nextStepLinks(profile)}`;
   }
 
+  function platformLabel(scan) {
+    if (!scan || !scan.platform) return 'Not detected';
+    return `${listValue(scan.platform.detected)}${scan.platform.confidence ? ' (' + scan.platform.confidence + ' confidence)' : ''}`;
+  }
+
+  function publicFindingsBlock(scan) {
+    if (!scan) {
+      return `0. Public scan findings\nThe live website check did not return enough data. Ask Axon can still advise, but a manual review is recommended.`;
+    }
+    const perf = scan.performance || {};
+    return [
+      '0. Public scan findings detected by Axon',
+      `Website checked: ${scan.url || 'Not detected'}`,
+      `Final URL / redirect result: ${scan.finalUrl || scan.url || 'Not detected'}`,
+      `HTTP status: ${scan.status || 'Unknown'}${scan.loads === false ? ' (page may not have loaded properly)' : ''}`,
+      `HTTPS: ${scan.https ? 'Yes' : 'No / not confirmed'}`,
+      `Likely website engine/platform: ${platformLabel(scan)}`,
+      `Page title: ${valueOrNone(scan.title)}`,
+      `Meta description: ${valueOrNone(scan.metaDescription)}`,
+      `Main H1: ${listValue(scan.h1)}`,
+      `Canonical URL: ${valueOrNone(scan.canonical)}`,
+      `Robots meta: ${valueOrNone(scan.robotsMeta)}`,
+      `Mobile viewport: ${yesNo(scan.viewport)}`,
+      `Schema / JSON-LD: ${yesNo(scan.schema)}`,
+      `Open Graph social tags: ${yesNo(scan.openGraph)}`,
+      `Twitter card tags: ${yesNo(scan.twitterCard)}`,
+      `Google Analytics GA4 clue: ${yesNo(scan.ga4Detected)}`,
+      `Google Tag / GTM clue: ${yesNo(scan.googleTagDetected)}`,
+      `Forms found: ${scan.formCount || 0}`,
+      `Email link: ${yesNo(scan.mailtoDetected)}`,
+      `WhatsApp link: ${yesNo(scan.whatsappDetected)}`,
+      `Images: ${perf.imageCount ?? 0}; missing alt text: ${perf.imagesMissingAlt ?? 0}`,
+      `Scripts: ${perf.scriptCount ?? 0}; external scripts: ${perf.externalScriptCount ?? 0}`,
+      `Internal links: ${perf.internalLinkCount ?? 0}; external links: ${perf.externalLinkCount ?? 0}`,
+      `robots.txt: ${scan.robots && scan.robots.exists ? 'Found' : 'Not found'}`,
+      `sitemap.xml: ${scan.sitemap && scan.sitemap.exists ? 'Found' : 'Not found'}`,
+      `llms.txt: ${scan.llms && scan.llms.exists ? 'Found' : 'Not found'}`,
+      `Basic load clue: ${perf.totalTimeMs ? perf.totalTimeMs + ' ms' : 'Not detected'}; TTFB: ${perf.ttfbMs ? perf.ttfbMs + ' ms' : 'Not detected'}`,
+      `Approx. page size: ${perf.pageSizeLabel || 'Not detected'}`,
+      `Cache/CDN clue: ${perf.cdnClue || 'Not detected'}`
+    ].join('\n');
+  }
+
+  function formatScanSummary(scan) {
+    if (!scan) return 'No live website scan data was available.';
+    const perf = scan.performance || {};
+    return [
+      publicFindingsBlock(scan),
+      `H2 headings: ${listValue(scan.h2)}`,
+      `CSS files/style blocks: ${perf.cssCount ?? 0}`,
+      `Visible text sample: ${scan.textSample || 'Not available'}`
+    ].join('\n');
+  }
+
+  function websiteFallback(scan, profile) {
+    const hasTitle = scan && scan.title;
+    const hasDesc = scan && scan.metaDescription;
+    const hasH1 = scan && Array.isArray(scan.h1) && scan.h1.length;
+    const hasSchema = scan && scan.schema;
+    const hasSitemap = scan && scan.sitemap && scan.sitemap.exists;
+    const hasLlms = scan && scan.llms && scan.llms.exists;
+    const perf = scan && scan.performance ? scan.performance : {};
+    return `1. Quick verdict\nI completed a basic public website check. This is not a full technical audit, but it gives useful clues about SEO, AI-search readiness, trust and conversion.\n\n2. What looks good\nThe page ${scan && scan.loads ? 'loaded during the check' : 'may have loading issues during the check'}. HTTPS is ${scan && scan.https ? 'detected' : 'not clearly confirmed'}. ${hasTitle ? 'A page title was detected.' : 'No clear page title was detected.'} The likely website engine/platform is ${platformLabel(scan)}.\n\n3. What may be weak or missing\n${hasDesc ? 'A meta description was detected.' : 'The meta description appears missing or not detected.'} ${hasH1 ? 'A main H1 heading was detected.' : 'A clear H1 heading was not detected.'} Schema is ${hasSchema ? 'detected' : 'not detected'}, sitemap.xml is ${hasSitemap ? 'found' : 'not found'}, and llms.txt is ${hasLlms ? 'found' : 'not found'}. Images missing alt text: ${perf.imagesMissingAlt ?? 0}.\n\n4. SEO / AEO / AI-search visibility feedback\nThe site should have a clear title, helpful meta description, one strong H1, service-focused sections, schema, sitemap, robots.txt, llms.txt and plain-English content so Google and AI answer engines can understand the business.\n\n5. Website trust and conversion feedback\nCheck whether visitors can quickly understand services, see contact options, submit forms, use WhatsApp, and know why they should trust the business.\n\n6. What to fix first\nStart with title, meta description, H1, service clarity, contact form, schema, sitemap, image alt text, tracking and AI-ready content.\n\n7. When Axon should help\nAsk Axon to review the full site if you need SEO/GEO/AEO, website revamp, tracking, form delivery, hosting, security or AI-search visibility improvements.\n\n${nextStepLinks(profile)}`;
+  }
+
+  function prepareWebsiteReply(reply, scan, profile) {
+    const findings = publicFindingsBlock(scan);
+    const cleanReply = appendPageReferences(reply || websiteFallback(scan, profile), profile);
+    if (/0\. Public scan findings detected by Axon/i.test(cleanReply)) return cleanReply;
+    return `${findings}\n\nAI advisory and improvement suggestions\n${cleanReply}`;
+  }
+
   async function runAsk(question, type, website, outputBox, options = {}) {
     if (!question || !outputBox || isAsking) return;
     const profile = options.profile || detectIntent(question);
@@ -144,13 +218,13 @@
       if (!reply) {
         reply = await askKimi(question, profile, { mode: options.websiteReview ? 'website_audit' : 'ask_axon', systemPrompt: options.systemPrompt });
         if (isWeakAiReply(reply)) reply = options.websiteReview ? websiteFallback(options.scan, profile) : fallbackAnswer(question, profile);
-        reply = appendPageReferences(reply, profile);
+        reply = options.websiteReview ? prepareWebsiteReply(reply, options.scan, profile) : appendPageReferences(reply, profile);
       }
       lastReply = reply;
       renderAnswer(outputBox, reply);
       showSubmitBox();
     } catch (error) {
-      const reply = options.websiteReview ? websiteFallback(options.scan, profile) : (templateAnswer(question, profile) || fallbackAnswer(question, profile));
+      const reply = options.websiteReview ? prepareWebsiteReply(websiteFallback(options.scan, profile), options.scan, profile) : (templateAnswer(question, profile) || fallbackAnswer(question, profile));
       lastReply = reply;
       renderAnswer(outputBox, `${reply}\n\nNote: The live AI service could not be reached, so Ask Axon prepared a safe advisory response using available checks and common business technology patterns.`);
       showSubmitBox();
@@ -168,55 +242,7 @@
     return data.scan || null;
   }
 
-  function listValue(value) { return Array.isArray(value) ? value.join(', ') : (value || 'Not detected'); }
-
-  function formatScanSummary(scan) {
-    if (!scan) return 'No live website scan data was available.';
-    const perf = scan.performance || {};
-    return [
-      `Checked URL: ${scan.url || ''}`,
-      `Final URL: ${scan.finalUrl || scan.url || 'Not detected'}`,
-      `HTTP status: ${scan.status || 'Unknown'}`,
-      `HTTPS: ${scan.https ? 'Yes' : 'No / not confirmed'}`,
-      `Redirects: ${perf.redirectCount ?? 0}`,
-      `Likely platform: ${listValue(scan.platform && scan.platform.detected)} (confidence: ${scan.platform && scan.platform.confidence ? scan.platform.confidence : 'not detected'})`,
-      `Basic load time clue: ${perf.totalTimeMs ? perf.totalTimeMs + ' ms' : 'Not detected'}`,
-      `TTFB clue: ${perf.ttfbMs ? perf.ttfbMs + ' ms' : 'Not detected'}`,
-      `Approx. page size: ${perf.pageSizeLabel || 'Not detected'}`,
-      `Title: ${scan.title || 'Not detected'}`,
-      `Meta description: ${scan.metaDescription || 'Not detected'}`,
-      `H1 headings: ${listValue(scan.h1)}`,
-      `Canonical: ${scan.canonical || 'Not detected'}`,
-      `Robots meta: ${scan.robotsMeta || 'Not detected'}`,
-      `Mobile viewport: ${scan.viewport ? 'Detected' : 'Not detected'}`,
-      `Schema / JSON-LD: ${scan.schema ? 'Detected' : 'Not detected'}`,
-      `Open Graph: ${scan.openGraph ? 'Detected' : 'Not detected'}`,
-      `Twitter card: ${scan.twitterCard ? 'Detected' : 'Not detected'}`,
-      `GA4 clue: ${scan.ga4Detected ? 'Detected' : 'Not detected'}`,
-      `Google Tag / GTM clue: ${scan.googleTagDetected ? 'Detected' : 'Not detected'}`,
-      `Forms found: ${scan.formCount || 0}`,
-      `Mail link clue: ${scan.mailtoDetected ? 'Detected' : 'Not detected'}`,
-      `WhatsApp clue: ${scan.whatsappDetected ? 'Detected' : 'Not detected'}`,
-      `Images: ${perf.imageCount ?? 0}`,
-      `Images missing alt text: ${perf.imagesMissingAlt ?? 0}`,
-      `Scripts: ${perf.scriptCount ?? 0} (external: ${perf.externalScriptCount ?? 0})`,
-      `CSS files/style blocks: ${perf.cssCount ?? 0}`,
-      `Internal links: ${perf.internalLinkCount ?? 0}`,
-      `External links: ${perf.externalLinkCount ?? 0}`,
-      `robots.txt: ${scan.robots && scan.robots.exists ? 'Found' : 'Not found'}`,
-      `sitemap.xml: ${scan.sitemap && scan.sitemap.exists ? 'Found' : 'Not found'}`,
-      `llms.txt: ${scan.llms && scan.llms.exists ? 'Found' : 'Not found'}`,
-      `Cache/CDN clue: ${perf.cdnClue || 'Not detected'}`,
-      `Visible text sample: ${scan.textSample || 'Not available'}`
-    ].join('\n');
-  }
-
-  function websiteFallback(scan, profile) {
-    const hasTitle = scan && scan.title;
-    const hasDesc = scan && scan.metaDescription;
-    const hasH1 = scan && Array.isArray(scan.h1) && scan.h1.length;
-    return `1. Quick verdict\nI completed a basic public website check. This is not a full technical audit, but it gives useful clues about the page, SEO, AI-search readiness and conversion basics.\n\n2. What looks good\nThe page ${scan && scan.loads ? 'loaded during the check' : 'may have loading issues during the check'}. HTTPS is ${scan && scan.https ? 'detected' : 'not clearly confirmed'}. ${hasTitle ? 'A page title was detected.' : 'No clear page title was detected.'}\n\n3. What may be weak or missing\n${hasDesc ? 'A meta description was detected.' : 'The meta description appears missing or not detected.'} ${hasH1 ? 'A main heading was detected.' : 'A clear H1 heading was not detected.'} Schema is ${scan && scan.schema ? 'detected' : 'not detected'}, and llms.txt is ${scan && scan.llms && scan.llms.exists ? 'found' : 'not found'}.\n\n4. SEO / AEO / AI-search visibility feedback\nThe site should have clear service wording, strong page titles, helpful descriptions, schema, sitemap, robots.txt and AI-friendly plain-English content so Google and AI answer engines can understand what the business does.\n\n5. Website trust and conversion feedback\nCheck whether visitors can quickly understand the services, see contact options, submit forms, use WhatsApp, and know why they should trust the business.\n\n6. What to fix first\nStart with title, description, H1, service clarity, contact form, sitemap, schema and AI-ready content.\n\n7. When Axon should help\nAsk Axon to review the full site if you need SEO/GEO/AEO, website revamp, tracking, form delivery, hosting, security or AI-search visibility improvements.\n\n${nextStepLinks(profile)}`;
-  }
+  function listValue(value) { return Array.isArray(value) ? (value.length ? value.join(', ') : 'Not detected') : (value || 'Not detected'); }
 
   function populateCommonQuestions() {
     if (!commonSelect) return;
@@ -258,10 +284,10 @@
     if (!box || !url || isAsking) return;
 
     let scan = null;
-    renderAnswer(box, 'Checking the live website first: status, title, description, headings, mobile tag, schema, sitemap, robots.txt, llms.txt, analytics clues, forms, links and image clues...');
+    renderAnswer(box, 'Checking the live website first: status, final URL, title, meta description, H1, likely website engine/platform, mobile tag, schema, sitemap, robots.txt, llms.txt, analytics clues, forms, links and image clues...');
     try { scan = await scanWebsite(url); } catch (error) { console.warn(error); }
     const profile = axonIntentProfiles.find((item) => item.key === 'website_review') || detectIntent(`${notes} ${url}`);
-    const prompt = `AI Website Advisory Review for a business owner.\n\nWebsite URL: ${url}\nClient notes: ${notes || 'None'}\n\nBASIC PUBLIC WEBSITE CHECK RESULTS:\n${formatScanSummary(scan)}\n\nPrepare an actual website advisory review using the scan findings. Avoid generic answers. Explain what Axon may need to check further.`;
+    const prompt = `AI Website Advisory Review for a business owner.\n\nWebsite URL: ${url}\nClient notes: ${notes || 'None'}\n\nBASIC PUBLIC WEBSITE CHECK RESULTS:\n${formatScanSummary(scan)}\n\nPrepare an actual website advisory review using the scan findings. Avoid generic answers. Mention the detected title, meta description, H1, likely engine/platform, analytics/tag clues, schema, sitemap, robots.txt, llms.txt and practical improvements. Explain what Axon may need to check further.`;
     runAsk(prompt, 'AI Website Advisory Review', url, box, { websiteReview: true, triggerButton: button, profile, scan, systemPrompt: websiteAuditPrompt(), progressMessage: 'Basic website check completed. Ask Axon is preparing the website advisory review using the scan findings...' });
   });
 
