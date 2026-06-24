@@ -4,11 +4,9 @@ window.kimiConfig = {
 };
 
 // Contact page: send form through server-side Resend handler.
-// API keys must stay in .env.local on the server, never in browser JavaScript.
 document.addEventListener('DOMContentLoaded', () => {
   const contactPageForm = document.getElementById('contactPageForm');
   const pageFormFeedback = document.getElementById('pageFormFeedback');
-
   if (!contactPageForm || !pageFormFeedback) return;
 
   contactPageForm.addEventListener('submit', async (event) => {
@@ -17,7 +15,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const submitBtn = contactPageForm.querySelector('button[type="submit"]');
     const originalBtnText = submitBtn ? submitBtn.textContent : 'Send Message';
-
     if (submitBtn) {
       submitBtn.disabled = true;
       submitBtn.textContent = 'Sending Request...';
@@ -52,13 +49,8 @@ document.addEventListener('DOMContentLoaded', () => {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(payload)
       });
-
       const data = await response.json().catch(() => ({}));
-
-      if (!response.ok || !data.success) {
-        throw new Error(data.message || 'Unable to send your request right now.');
-      }
-
+      if (!response.ok || !data.success) throw new Error(data.message || 'Unable to send your request right now.');
       pageFormFeedback.innerHTML = '<strong>Thank you.</strong> Your request has been sent successfully. We will revert back as soon as possible.';
       pageFormFeedback.classList.add('success');
       pageFormFeedback.classList.remove('hidden');
@@ -142,13 +134,15 @@ document.addEventListener('DOMContentLoaded', () => {
     return words.some((word) => text.includes(word));
   }
 
+  function hasCrmIntent(text) {
+    return includesAny(text, ['crm', 'lead management', 'lead tracking', 'sales pipeline', 'customer database', 'customer relationship', 'follow up', 'followup', 'leads', 'manage leads', 'whatsapp crm', 'client management', 'customer management', 'enquiry management']);
+  }
+
   function addMessage(role, text, actions = []) {
     const message = document.createElement('div');
     message.className = `axon-agent-message ${role}`;
-
     const speaker = document.createElement('strong');
     speaker.textContent = role === 'user' ? 'You' : 'Axon AI Advisor';
-
     const body = document.createElement('p');
     body.textContent = text;
     message.append(speaker, body);
@@ -161,7 +155,6 @@ document.addEventListener('DOMContentLoaded', () => {
         referenceTitle.textContent = 'Recommended Axon pages to read:';
         message.appendChild(referenceTitle);
       }
-
       const actionWrap = document.createElement('div');
       actionWrap.className = 'axon-agent-actions';
       actions.forEach((action) => {
@@ -178,7 +171,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     messages.appendChild(message);
     messages.scrollTop = messages.scrollHeight;
-    return message;
   }
 
   function prefillForm(question, topic) {
@@ -186,14 +178,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const existing = contactMessage.value.trim();
     if (existing) return;
     contactMessage.value = `I need help with ${topic}.\n\nMy issue / requirement:\n${question}\n\nPlease advise the safest next step.`;
-  }
-
-  function hasCrmIntent(text) {
-    return includesAny(text, [
-      'crm', 'lead management', 'lead tracking', 'sales pipeline', 'customer database',
-      'customer relationship', 'follow up', 'followup', 'leads', 'manage leads',
-      'whatsapp crm', 'client management', 'customer management', 'enquiry management'
-    ]);
   }
 
   function topicActions(question) {
@@ -250,12 +234,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (hasCrmIntent(text)) {
       prefillForm(question, 'CRM and lead management setup');
-      return `1. What this likely means\nCRM means a simple system to manage enquiries, customers, follow-ups and sales opportunities. For many SMEs, the real issue is not only software. It is making sure website forms, WhatsApp enquiries, email enquiries and staff follow-ups do not get missed.\n\n2. What could be involved\nA CRM setup may include enquiry forms, customer records, lead stages, reminders, quotation follow-up, WhatsApp or email handover, staff access, simple dashboards and reports. It can be a ready-made CRM, a lightweight lead tracker, or a custom workflow depending on the business size.\n\n3. What you can check first\nCheck where leads come from today: website, WhatsApp, Facebook, phone calls, referrals, email or walk-ins. Also check who follows up, how leads are recorded, and where leads get lost.\n\n4. DIY or Axon help\nDIY is okay if you only need a spreadsheet or very basic tracker. Ask Axon to help if leads come from multiple channels, staff need shared access, reminders are needed, or you want forms, WhatsApp, email and CRM to work together.\n\n5. Best next step\nSend Axon your website URL, current enquiry sources and how your team follows up today. Axon can recommend a simple CRM or lead-management setup before you spend money on the wrong platform. The related Axon pages below explain the options.`,
+      return `1. What this likely means\nCRM means a simple system to manage enquiries, customers, follow-ups and sales opportunities. For many SMEs, the real issue is not only software. It is making sure website forms, WhatsApp enquiries, email enquiries and staff follow-ups do not get missed.\n\n2. What could be involved\nA CRM setup may include enquiry forms, customer records, lead stages, reminders, quotation follow-up, WhatsApp or email handover, staff access, simple dashboards and reports. It can be a ready-made CRM, a lightweight lead tracker, or a custom workflow depending on the business size.\n\n3. What you can check first\nCheck where leads come from today: website, WhatsApp, Facebook, phone calls, referrals, email or walk-ins. Also check who follows up, how leads are recorded, and where leads get lost.\n\n4. DIY or Axon help\nDIY is okay if you only need a spreadsheet or very basic tracker. Ask Axon to help if leads come from multiple channels, staff need shared access, reminders are needed, or you want forms, WhatsApp, email and CRM to work together.\n\n5. Best next step\nSend Axon your website URL, current enquiry sources and how your team follows up today. Axon can recommend a simple CRM or lead-management setup before you spend money on the wrong platform. The related Axon pages below explain the options.`;
     }
 
     if (includesAny(text, ['payment gateway', 'payment', 'stripe', 'paynow', 'paypal', 'checkout', 'credit card', 'online payment', 'pay online', 'gcash'])) {
       prefillForm(question, 'payment gateway integration');
-      return `1. What this likely means\nYou want customers to pay online from your website, form, booking page, invoice, shop or portal. In simple terms, your website must safely collect an order or request, send the customer to a trusted payment provider, then confirm the payment result.\n\n2. What could be involved\nThe right setup depends on your platform. It may involve Stripe, PayPal, PayNow, GCash, WooCommerce, Shopify, booking payments, invoice links, SSL, success pages, failed payment handling and email confirmations.\n\n3. What you can check first\nCheck what people are paying for, what country/currency you need, which payment provider you prefer and whether payment must connect to a form, invoice, booking or online store.\n\n4. DIY or Axon help\nDIY is okay for very simple payment links. Ask Axon to assist when payment is connected to your website, customer emails, forms, invoices, booking flow, WooCommerce, Shopify or custom app.\n\n5. Best next step\nSend Axon your website URL, payment provider preference and what customers are paying for. The related Axon pages below can help you understand the service before contacting us.`;
+      return `1. What this likely means\nYou want customers to pay online from your website, form, booking page, invoice, shop or portal.\n\n2. What could be involved\nThe right setup depends on your platform. It may involve Stripe, PayPal, PayNow, GCash, WooCommerce, Shopify, booking payments, invoice links, SSL, success pages, failed payment handling and email confirmations.\n\n3. What you can check first\nCheck what people are paying for, what country/currency you need, which payment provider you prefer and whether payment must connect to a form, invoice, booking or online store.\n\n4. DIY or Axon help\nDIY is okay for very simple payment links. Ask Axon to assist when payment is connected to your website, customer emails, forms, invoices, booking flow, WooCommerce, Shopify or custom app.\n\n5. Best next step\nSend Axon your website URL, payment provider preference and what customers are paying for. The related Axon pages below can help you understand the service before contacting us.`;
     }
 
     if (includesAny(text, ['google to 365', 'google workspace to microsoft', 'gmail to outlook', 'gmail to 365', 'move to 365', 'migrate to 365'])) {
@@ -309,10 +293,8 @@ document.addEventListener('DOMContentLoaded', () => {
   form.addEventListener('submit', (event) => {
     event.preventDefault();
     event.stopImmediatePropagation();
-
     const question = input.value.trim();
     if (!question) return;
-
     addMessage('user', question);
     addMessage('agent', buildAnswer(question), topicActions(question));
     input.value = '';
