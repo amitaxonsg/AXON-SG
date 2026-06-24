@@ -69,6 +69,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // Contact page: plain-English AI helper for non-IT business owners.
+// Flow: known Axon template first; if no template matches, ask server-side Kimi AI; if AI is unavailable, use safe fallback.
 document.addEventListener('DOMContentLoaded', () => {
   const form = document.getElementById('axonAgentForm');
   const input = document.getElementById('axonAgentInput');
@@ -171,6 +172,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     messages.appendChild(message);
     messages.scrollTop = messages.scrollHeight;
+    return message;
   }
 
   function prefillForm(question, topic) {
@@ -229,7 +231,12 @@ document.addEventListener('DOMContentLoaded', () => {
     return actions;
   }
 
-  function buildAnswer(question) {
+  function genericFallbackAnswer(question) {
+    prefillForm(question, 'business technology question');
+    return `1. What this likely means\nThis may be a website, email, hosting, AI, automation, security, payment, CRM, cloud, analytics or business technology matter. The exact solution depends on what you are trying to achieve and what system you use today.\n\n2. What could be involved\nIt may involve your website platform, domain, hosting, email, forms, payment flow, customer enquiries, staff workflow, search visibility, AI chatbot, automation or data/security setup.\n\n3. What you can check first\nPrepare your website URL, the tool or platform involved, what you expected to happen, what actually happened, screenshots and whether customers or staff are affected.\n\n4. DIY or Axon help\nDIY is okay for very simple checks. Ask Axon to assist if the matter affects enquiries, email, payment, security, search visibility, automation, customer data or business operations.\n\n5. Best next step\nSubmit the form on this page or use the WhatsApp Axon button below. Axon can review the situation and suggest the safest practical next step.`;
+  }
+
+  function buildTemplateAnswer(question) {
     const text = normalize(question);
 
     if (hasCrmIntent(text)) {
@@ -287,16 +294,59 @@ document.addEventListener('DOMContentLoaded', () => {
       return `1. What this likely means\nYou want to use AI, a chatbot, automation or an assistant to reduce manual work or answer customers better.\n\n2. What could be involved\nThis may include website chatbot, internal AI assistant, content support, workflow automation, company knowledge, privacy rules and staff usage guidelines.\n\n3. What you can check first\nList the repetitive questions or tasks you want AI to handle.\n\n4. DIY or Axon help\nDIY is okay for trying ChatGPT. Ask Axon if AI must connect to your business process, website, documents, team workflow or customer enquiries.\n\n5. Best next step\nSend Axon the task you want to automate. The related Axon pages below explain AI advisory and business help.`;
     }
 
-    return `1. What this likely means\nThis sounds like a website, email, hosting, AI, automation or business technology matter that needs a clearer look before choosing the right solution.\n\n2. What could be involved\nIt may involve your website platform, hosting, domain, email, forms, payment, SEO, analytics, AI chatbot, automation, security or business workflow.\n\n3. What you can check first\nPrepare the website URL, what you expected to happen, what actually happened, screenshots and whether the issue affects customers, staff or only you.\n\n4. DIY or Axon help\nSimple content changes may be DIY. Ask Axon to assist if the issue affects enquiries, payment, email, security, Google visibility, AI readiness or business operations.\n\n5. Best next step\nSubmit the form on this page or use the WhatsApp Axon button below. The related Axon pages below are recommended starting points.`;
+    return null;
   }
 
-  form.addEventListener('submit', (event) => {
+  async function askAxonAiFallback(question) {
+    const backendUrl = window.kimiConfig?.backendUrl || '/axon-agent.php';
+    const marketContext = isPhilippines
+      ? 'Philippines, Clark, Pampanga, Angeles City, Baguio and remote support clients'
+      : 'Singapore business owners and remote support clients';
+
+    const systemPrompt = `You are Axon AI Advisor for ${marketContext}. The visitor may type any short business or technology phrase that does not match a fixed template. Answer in plain English for non-IT business owners. Use exactly these five numbered sections: 1. What this likely means 2. What could be involved 3. What you can check first 4. DIY or Axon help 5. Best next step. Keep the tone helpful, practical and business-focused. Relate the answer to Axon services where relevant: websites, hosting, domains, DNS, email, Google Workspace, Microsoft 365, CRM, payment gateway, forms, SEO, SEM, GEO, AEO, AI search, AI chatbot, automation, app publishing, security, backup, cloud, analytics and business technology advisory. Do not claim a full audit was done. Do not include markdown links because the website displays recommended page buttons separately. Do not provide instructions for hacking, bypassing security, malware creation or unsafe actions. If the question is outside Axon's scope, say so politely and suggest what information the visitor should send to Axon for practical advice. Always end by recommending the visitor submit the contact form or use WhatsApp Axon if they want help.`;
+
+    try {
+      const response = await fetch(backendUrl, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          question,
+          mode: 'contact_ai_fallback',
+          systemPrompt
+        })
+      });
+
+      const data = await response.json().catch(() => ({}));
+      if (!response.ok || !data.success || !data.reply) throw new Error(data.message || 'AI fallback unavailable.');
+      return String(data.reply).trim();
+    } catch (error) {
+      console.warn('Axon AI fallback unavailable:', error);
+      return genericFallbackAnswer(question);
+    }
+  }
+
+  form.addEventListener('submit', async (event) => {
     event.preventDefault();
     event.stopImmediatePropagation();
+
     const question = input.value.trim();
     if (!question) return;
+
     addMessage('user', question);
-    addMessage('agent', buildAnswer(question), topicActions(question));
     input.value = '';
+
+    const actions = topicActions(question);
+    const templateAnswer = buildTemplateAnswer(question);
+
+    if (templateAnswer) {
+      addMessage('agent', templateAnswer, actions);
+      return;
+    }
+
+    prefillForm(question, 'business technology question');
+    const thinkingMessage = addMessage('agent', 'Axon AI is reviewing your question and preparing a plain-English answer...');
+    const aiAnswer = await askAxonAiFallback(question);
+    thinkingMessage.remove();
+    addMessage('agent', aiAnswer || genericFallbackAnswer(question), actions);
   }, true);
 });
