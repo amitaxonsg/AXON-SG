@@ -12,10 +12,21 @@ https://axon.com.sg/
 - Business support: support@axon.com.sg
 
 ## Core positioning
-Axon helps non-technical business owners and SMEs plan, build, fix and improve websites, hosting, domains, business email, Google Workspace, Microsoft 365, AI tools, automation, cybersecurity, recovery and digital presence.
+Axon helps non-technical business owners and SMEs plan, build, fix and improve websites, hosting, domains, business email, Google Workspace, Microsoft 365, AI tools, automation, recovery and digital presence.
 
 ## Ask Axon
-Ask Axon is a plain-English technology and AI advisory page for business owners. Visitors can describe a website, app, email, cloud, automation, cybersecurity, AI or general technology issue and receive practical next steps. Ask Axon also includes an AI Website Advisory Review for website URLs. It is advisory guidance, not a full technical audit unless Axon separately reviews speed, code, hosting, DNS, SSL, analytics and backend access.
+Ask Axon is a plain-English technology and AI advisory page for business owners. Visitors can describe a website, app, email, cloud, automation, AI or general technology issue and receive practical next steps. Ask Axon also includes an AI Website Advisory Review for website URLs.
+
+## Common business technology help pages
+These pages match how non-technical business owners usually search in Google and AI answer engines.
+- Business Technology Help: https://axon.com.sg/business-technology-help.html
+- Business Email Migration Help: https://axon.com.sg/business-email-migration-help.html
+- Website Not Showing on Google: https://axon.com.sg/website-not-showing-on-google.html
+- Website Form Not Sending Email: https://axon.com.sg/website-form-not-sending-email.html
+- Website Security and Recovery Help: https://axon.com.sg/website-security-recovery-help.html
+- Payment Gateway Setup Help: https://axon.com.sg/payment-gateway-help.html
+- AI Advisory for Business Owners: https://axon.com.sg/ai-advisory-for-business-owners.html
+- IT Support Singapore: https://axon.com.sg/it-support-singapore.html
 
 ## AI search and modern website services
 - AI Search Visibility: https://axon.com.sg/ai-search-visibility.html
@@ -50,11 +61,11 @@ Ask Axon is a plain-English technology and AI advisory page for business owners.
 - Workflow Automation: https://axon.com.sg/workflow-automation.html
 - Website Security: https://axon.com.sg/website-security.html
 - Website Recovery: https://axon.com.sg/website-recovery.html
-- Malware Removal: https://axon.com.sg/malware-removal.html
 
 ## Email and cloud migration services
 - Google Workspace to Microsoft 365 Migration: https://axon.com.sg/google-workspace-to-microsoft-365-migration.html
 - Microsoft 365 to Google Workspace Migration: https://axon.com.sg/microsoft-365-to-google-workspace-migration.html
+- Business Email Migration Help: https://axon.com.sg/business-email-migration-help.html
 - Gmail to Outlook business email migration
 - Outlook to Gmail business email migration
 - Business email migration support
