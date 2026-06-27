@@ -1,4 +1,4 @@
-name: Coolworld Download Images
+name: Coolworld Image Downloader
 
 on:
   workflow_dispatch:
@@ -13,7 +13,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Download images from existing image_urls.txt
+      - name: Download Coolworld images from existing URL list
         run: |
           cd coolworldaircon-restore
           mkdir -p images
@@ -26,45 +26,39 @@ jobs:
 
           for i, url in enumerate(urls, 1):
               original = url.split("if_/", 1)[-1]
-              path = urllib.parse.urlparse(original).path
-              fname = os.path.basename(path)
+              path = urllib.parse.urlparse(original).path.lstrip("/")
+              dest = os.path.join(".", path)
+              os.makedirs(os.path.dirname(dest), exist_ok=True)
 
-              if not fname:
-                  fname = f"image-{i}.jpg"
-
-              fname = urllib.parse.unquote(fname)
-              safe = f"{i:03d}-{fname}"
-              out = os.path.join("images", safe)
-
-              print("Downloading", safe)
+              print(f"[{i}/{len(urls)}] {path}")
 
               try:
                   req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
-                  with urllib.request.urlopen(req, timeout=90) as r:
+                  with urllib.request.urlopen(req, timeout=120) as r:
                       data = r.read()
 
                   if len(data) > 1024:
-                      with open(out, "wb") as f:
+                      with open(dest, "wb") as f:
                           f.write(data)
-                      downloaded.append(out)
+                      downloaded.append(path)
                   else:
-                      print("Skipped small file", safe)
+                      print("Small file skipped")
 
               except Exception as e:
-                  print("FAILED", safe, e)
+                  print("FAILED", url, e)
 
-              time.sleep(0.3)
+              time.sleep(0.5)
 
           with open("restored-images.txt", "w") as f:
               f.write("\n".join(downloaded) + "\n")
 
-          print("Downloaded files:", len(downloaded))
+          print("Downloaded:", len(downloaded))
           PY
 
       - name: Commit downloaded images
         run: |
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
-          git add coolworldaircon-restore/images coolworldaircon-restore/restored-images.txt
-          git commit -m "Download Coolworld restored images from Wayback URLs" || echo "Nothing to commit"
+          git add coolworldaircon-restore
+          git commit -m "Download Coolworld restored images from Wayback" || echo "Nothing to commit"
           git push
