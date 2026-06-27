@@ -13,40 +13,53 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Restore Coolworld images from Wayback 2025
+      - name: Restore Coolworld images and assets from Wayback 2020-2025
         run: |
+          rm -rf coolworldaircon-restore
           mkdir -p coolworldaircon-restore/images
           cd coolworldaircon-restore
 
-          for M in 06 05 04 03 02 01; do
-            echo "Checking 2025-$M"
-            curl -L --retry 3 --connect-timeout 20 --max-time 180 \
-            "https://web.archive.org/cdx?url=coolworldaircon.com.sg/*&from=2025${M}&to=2025${M}&output=json&fl=timestamp,original,mimetype,statuscode,digest&filter=statuscode:200&collapse=digest" \
-            -o "cdx-2025-$M.json" || true
+          for HOST in coolworldaircon.com.sg www.coolworldaircon.com.sg; do
+            for Y in $(seq 2025 -1 2020); do
+              echo "Checking $HOST $Y"
+              curl -L --retry 3 --connect-timeout 20 --max-time 180 \
+              "https://web.archive.org/cdx?url=${HOST}/*&from=${Y}01&to=${Y}12&output=json&fl=timestamp,original,mimetype,statuscode,digest&filter=statuscode:200&collapse=digest" \
+              -o "cdx-${HOST}-${Y}.json" || true
+            done
           done
 
           python3 <<'PY'
           import json, glob, re
           imgs=[]
-          for f in glob.glob("cdx-2025-*.json"):
+
+          for f in glob.glob("cdx-*.json"):
               try:
                   data=json.load(open(f))
               except Exception:
                   continue
+
               rows=data[1:] if data and data[0][0]=="timestamp" else data
+
               for r in rows:
                   if len(r) < 5:
                       continue
+
                   ts,url,mt,code,digest=r
-                  if re.search(r'\.(jpg|jpeg|png|gif|webp)(\?|$)', url, re.I) or (mt and mt.startswith("image/")):
+
+                  if re.search(r'\.(jpg|jpeg|png|gif|webp|svg|avif|ico|pdf)(\?|$)', url, re.I) or (mt and (mt.startswith("image/") or "pdf" in mt)):
                       imgs.append(f"https://web.archive.org/web/{ts}if_/{url}")
-          open("image_urls.txt","w").write("\n".join(sorted(set(imgs)))+"\n")
-          print("Images found:", len(set(imgs)))
+
+          imgs=sorted(set(imgs))
+          open("image_urls.txt","w").write("\n".join(imgs)+"\n")
+          print("Images/assets found:", len(imgs))
           PY
 
           while read url; do
             [ -z "$url" ] && continue
+
             fname=$(echo "$url" | sed 's/[?].*//' | awk -F/ '{print $NF}')
+            [ -z "$fname" ] && continue
+
             echo "Downloading $fname"
             curl -L --retry 2 --connect-timeout 20 --max-time 120 "$url" -o "images/$fname" || true
           done < image_urls.txt
@@ -54,10 +67,13 @@ jobs:
           find images -type f -size -1k -delete
           find images -type f -size +1k > restored-images.txt
 
-      - name: Commit recovered images
+          echo "Downloaded files:"
+          cat restored-images.txt
+
+      - name: Commit recovered files
         run: |
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
           git add coolworldaircon-restore
-          git commit -m "Restore Coolworld archived images from Wayback" || echo "Nothing to commit"
+          git commit -m "Restore Coolworld archived images and assets from Wayback 2020-2025" || echo "Nothing to commit"
           git push
